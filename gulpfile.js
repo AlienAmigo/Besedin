@@ -87,7 +87,8 @@ exports.processJs = processJs;
 
 function copyJsVendors() {
   return src([
-      'node_modules/svg4everybody/dist/svg4everybody.min.js'
+      'node_modules/svg4everybody/dist/svg4everybody.min.js',
+      // 'js/'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(dest(dir.build + 'js/'))
