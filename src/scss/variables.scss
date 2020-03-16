@@ -1,3 +1,9 @@
+// 1. Цвета
+// 2. Типографика
+// 3. Сетка
+//
+
+// 1. Цвета
 $main-color:          #bedef3;
 $warning-color:       #d5303a;
 
@@ -6,10 +12,14 @@ $gray-dark:           #181818;
 
 $text-color:          #fbfbfb;
 
-$font-family:         -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-$font-size:           16px;
+// 2. Типографика
+
+$font-family:         'Open Sans', 'Arial', sans-serif;
+$font-size:           18px;
+$font-size-sm:        14px;
 $line-height:         1.4;
 
+// 3. Сетка
 $screen-xs:           480px;
 $screen-sm:           768px;
 $screen-md:           992px;
