@@ -1,0 +1,30 @@
+.social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  padding-bottom: 40px;
+  list-style: none;
+
+  &__item {
+    margin-right: 30px;
+    @include ff-OpenSans(300, 10px, 13px);
+  }
+
+  &__link {
+    color: $text-color;
+    text-decoration: none;
+
+    &:visited {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+
+  &--menu {
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+}

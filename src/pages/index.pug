@@ -1,17 +1,82 @@
-extends ../pug/layout.pug
+//- include mixins.pug
 
-block meta
-  title Главная
-  meta(name='description', content='')
+doctype html
+html(class='page  no-js', lang='ru')
 
-//- block append head
-//-   link(rel='stylesheet', href='css/some.css')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    link(rel='stylesheet', href='css/style.css')
+    title Владимир Беседин | Режиссёр, продюсер, сценарист
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    script.
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
-block header
-  p Лого
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+    .page__inner
+      .page__content.container
+        include ../pug/data.pug
 
-block content
-  h1 Заголовок
+        header.header
+          a(href="/").header__link
+            h1.header__title Владимир #[span Беседин]
+          .header__burger(id='menu-burger')
+            -for(let i = 0; i < 3; i++)
+              .header__burger-line(data-id=`${i}`)
+            ul.main-nav__list
+          nav.main-nav(id='main-nav')
+              .main-nav__close-btn
+              -for(let i = 0; i < arrayNav.length; i++)
+                li.main-nav__item
+                  a(href=`${arrayNav[i].url}`).main-nav__link= arrayNav[i].text
+            ul.social-links.social-links--menu
+              -for(let i = 0; i < arraySocialLinks.length; i++)
+                li.social-links__item
+                  a(href=`${arraySocialLinks[i].url}`).social-links__link= arraySocialLinks[i].title
+
+        section.intro
+          .intro__img-wrap
+            img(src='img/work_block.png', alt='')
+
+          .row
+            .col-xs-12
+              p.page__text Владимир Беседин — режиссёр, продюсер и сценарист. Глава кинокомпании BUBBLE Studios (2015–2018). Режиссер и продюсер первого фильма по российским комиксам «Майор Гром».
+            .col-xs-12
+
+
+
+
+        section.contacts
+          h2.page__title Хотите с нами работать? #[br] #[span.page__title--warning –] Свяжитесь с нами
+
+
+      .page__footer-wrapper
+        .row
+          footer.col-xs-12.footer © 2020 #[span Владимир Беседин] Все права защищены.
+
+
+
+    script(src='js/vendors.min.js')
+    script(src='js/script.min.js')
+
+//- block meta
+
+
+//- //- block append head
+//- //-   link(rel='stylesheet', href='css/some.css')
+
+//- block header
+
+
+
+//- block content
+//-   h1 Заголовок
 
 //- block footer
 //-   p footer

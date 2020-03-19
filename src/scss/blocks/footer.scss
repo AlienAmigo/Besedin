@@ -1,0 +1,13 @@
+.footer {
+  margin-bottom: 40px;
+  @include ff-OpenSans(400, 8px, 15px);
+
+  span {
+    font-weight: 600;
+  }
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 50px;
+    font-size: 10px;
+  }
+}

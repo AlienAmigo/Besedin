@@ -60,7 +60,7 @@ function compileStyles() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer({browserslist: ['last 2 version']}),
+      autoprefixer({overrideBrowserslist: ['last 2 version']}),
     ]))
     .pipe(sourcemaps.write('/'))
     .pipe(dest(dir.build + 'css/'))

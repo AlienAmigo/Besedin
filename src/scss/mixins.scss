@@ -1,0 +1,20 @@
+@mixin psuedo($pos: absolute) {
+  content: '';
+  display: 'block';
+  position: absolute;
+}
+
+
+@mixin ff-OpenSans($fw: 400, $sz: $font-size, $lh: $line-height) {
+  font-family: $font-family;
+  font-weight: $fw;
+  font-size: $sz;
+  line-height: $lh;
+}
+
+@mixin ff-OpenSansCondenced($fw: 400, $sz: $font-size, $lh: $line-height) {
+  font-family: 'Open Sans Condensed', 'Arial', sans-serif;
+  font-weight: $fw;
+  font-size: $sz;
+  line-height: $lh;
+}

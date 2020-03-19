@@ -1,5 +1,11 @@
 @import 'fonts';
 @import 'grid';
 @import 'variables';
+@import 'mixins';
 
 @import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/main-nav';
+@import 'blocks/social-links';
+@import 'blocks/intro';
+@import 'blocks/footer';
