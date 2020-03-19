@@ -3,9 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Главная</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <link rel="stylesheet" href="css/style.css">
+  <title>Владимир Беседин | Режиссёр, продюсер, сценарист</title>
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
@@ -13,12 +19,46 @@
 
 <body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
   <div class="page__inner">
-    <div class="page__content">
-      <p>Лого</p>
-      <h1>Заголовок</h1>
+    <div class="page__content container">
+      <header class="header"><a class="header__link" href="/">
+          <h1 class="header__title">Владимир <span>Беседин</span></h1>
+        </a>
+        <div class="header__burger" id="menu-burger">
+          <div class="header__burger-line" data-id="0"></div>
+          <div class="header__burger-line" data-id="1"></div>
+          <div class="header__burger-line" data-id="2"></div>
+        </div>
+        <nav class="main-nav" id="main-nav">
+          <ul class="main-nav__list">
+            <div class="main-nav__close-btn"></div>
+            <li class="main-nav__item"><a class="main-nav__link" href="#About">О режиссёре</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#Projects">Проекты</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#Contacts">Контакты</a></li>
+          </ul>
+          <ul class="social-links social-links--menu">
+            <li class="social-links__item"><a class="social-links__link" href="http://www.instagram.com/vovabesedin">Instagram</a></li>
+            <li class="social-links__item"><a class="social-links__link" href="https://vk.com/vladimirbesedin">Vkontakte</a></li>
+            <li class="social-links__item"><a class="social-links__link" href="https://vimeo.com/vladimirbesedin">Vimeo</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="intro">
+        <div class="intro__img-wrap"><img src="img/work_block.png" alt=""></div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="page__text">Владимир Беседин — режиссёр, продюсер и сценарист. Глава кинокомпании BUBBLE Studios (2015–2018). Режиссер и продюсер первого фильма по российским комиксам «Майор Гром».</p>
+          </div>
+          <div class="col-xs-12"></div>
+        </div>
+      </section>
+      <section class="contacts">
+        <h2 class="page__title">Хотите с нами работать? <br> <span class="page__title--warning">–</span> Свяжитесь с нами</h2>
+      </section>
     </div>
     <div class="page__footer-wrapper">
-      <p>Подвал</p>
+      <div class="row">
+        <footer class="col-xs-12 footer">© 2020 <span>Владимир Беседин</span> Все права защищены.</footer>
+      </div>
     </div>
   </div>
   <script src="js/vendors.min.js"></script>
