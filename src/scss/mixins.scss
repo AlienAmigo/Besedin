@@ -13,7 +13,7 @@
 }
 
 @mixin ff-OpenSansCondenced($fw: 400, $sz: $font-size, $lh: $line-height) {
-  font-family: 'Open Sans Condensed', 'Arial', sans-serif;
+  font-family: 'Open Sans Condensed', Arial, sans-serif;
   font-weight: $fw;
   font-size: $sz;
   line-height: $lh;

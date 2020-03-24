@@ -17,10 +17,16 @@ body {
 $screen-xs:           480px;
 $screen-sm:           768px;
 $screen-md:           992px;
-$screen-lg:           1200px;
+$screen-lg:           1280px;
 
 $grid-gap:            10px;
 $grid-col:            12;
+
+$margin-xs:           20px;
+$margin-sm:           20px;
+$margin-md:           60px;
+$margin-lg:           60px;
+
 
 .container {
   display: flex;
@@ -32,6 +38,7 @@ $grid-col:            12;
 
 .row {
   display: flex;
+  align-self: stretch;
   flex-flow: row wrap;
   justify-content: flex-start;
 }
@@ -73,6 +80,11 @@ $grid-col:            12;
     width: $screen-xs;
   }
 
+  .row {
+    margin-left: $margin-xs;
+    margin-right: $margin-xs;
+  }
+
   .hidden-xs {
     display: none;
   }
@@ -98,6 +110,11 @@ $grid-col:            12;
 
   .container {
     width: $screen-sm;
+  }
+
+  .row {
+    margin-left: $margin-sm;
+    margin-right: $margin-sm;
   }
 
   .hidden-sm {
@@ -127,6 +144,11 @@ $grid-col:            12;
     width: $screen-md;
   }
 
+  .row {
+    margin-left: $margin-md;
+    margin-right: $margin-md;
+  }
+
   .hidden-md {
     display: none;
   }
@@ -152,6 +174,11 @@ $grid-col:            12;
 
   .container {
     width: $screen-lg;
+  }
+
+  .row {
+    margin-left: $margin-lg;
+    margin-right: $margin-lg;
   }
 
   .hidden-lg {

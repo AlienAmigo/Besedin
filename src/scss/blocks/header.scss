@@ -11,6 +11,18 @@
   padding-left: $grid-gap;
   padding-right: $grid-gap;
 
+  @media (min-width: $screen-sm) {
+    width: 100%;
+    padding-left: calc(#{$margin-sm} + #{$grid-gap});
+    padding-right: calc(#{$margin-sm} + #{$grid-gap});
+  }
+
+  @media (min-width: $screen-md) {
+    
+    padding-left: calc(#{$margin-md} + #{$grid-gap});
+    padding-right: calc(#{$margin-md} + #{$grid-gap});
+  }
+
   &__link {
     text-decoration: none;
     color: $text-color;
@@ -29,8 +41,8 @@
   &__burger {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-self: center;
+    justify-content: space-between;
     width: 20px;
     height: 10px;
     cursor: pointer;

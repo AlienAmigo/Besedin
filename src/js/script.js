@@ -11,7 +11,7 @@ ready(function(){
 
   const burgerMenu = document.querySelector('#menu-burger');
   const mainNav = document.querySelector('#main-nav');
-  const mainNavCloseBtn = document.querySelector('#main-nav');
+  const mainNavCloseBtn = document.querySelector('#main-nav-close-btn');
 
   function toggleMenu() {
     mainNav.classList.toggle('main-nav--mobile-active');
@@ -19,13 +19,13 @@ ready(function(){
 
   if (burgerMenu) {
     burgerMenu.addEventListener('click', ev => {
-      mainNav.classList.add('main-nav--mobile-active');
-    });
-  }
+      toggleMenu();
+      });
+    }
 
-  if (mainNavCloseBtn) {
-    mainNavCloseBtn.addEventListener('click', ev => {
-      mainNav.classList.remove('main-nav--mobile-active');
+    if (mainNavCloseBtn) {
+      mainNavCloseBtn.addEventListener('click', ev => {
+        toggleMenu();
     });
   }
 });

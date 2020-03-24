@@ -1,5 +1,6 @@
 .footer {
   margin-bottom: 40px;
+  /* stylelint-ignore-next-line order */
   @include ff-OpenSans(400, 8px, 15px);
 
   span {

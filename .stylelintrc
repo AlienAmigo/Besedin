@@ -41,10 +41,10 @@
       # Кастомные свойства
       "custom-properties",
       # Инклуды примесей
-      {
-        "type": "at-rule",
-        "name": "include",
-      },
+      #{
+      #  "type": "at-rule",
+      #  "name": "include",
+      #},
       # Свойства
       "declarations",
       # Медиаусловия
@@ -556,9 +556,9 @@
     "selector-descendant-combinator-no-non-space": [true, {
       "message": "Комбинированные селекторы одним пробелом разделять следует"
     }],
-    "linebreaks": ["unix", {
-      "severity": "warning",
-      "message": "Окончания строк должны быть LF. Настроить редактор следует"
-    }],
+    #"linebreaks": ["unix", {
+    #  "severity": "warning",
+    #  "message": "Окончания строк должны быть LF. Настроить # редактор следует"
+    #}],
   }
 }
