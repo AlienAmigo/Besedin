@@ -30,12 +30,13 @@
     @include ff-OpenSansCondenced(300, 32px, 42px);
     text-transform: uppercase;
 
-    &__title--warning {
+    &--warning {
       color: $warning-color;
     }
   }
 
   &__text {
+    margin-bottom: 30px;
     @include ff-OpenSans(400, 16px, 25px);
   }
 }

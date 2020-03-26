@@ -8,8 +8,8 @@
   left: 0;
   width: 100%;
   margin-top: 35px;
-  padding-left: $grid-gap;
-  padding-right: $grid-gap;
+  padding-left: 30px;
+  padding-right: 30px;
 
   @media (min-width: $screen-sm) {
     width: 100%;
@@ -18,7 +18,7 @@
   }
 
   @media (min-width: $screen-md) {
-    
+
     padding-left: calc(#{$margin-md} + #{$grid-gap});
     padding-right: calc(#{$margin-md} + #{$grid-gap});
   }
@@ -51,6 +51,7 @@
       width: 100%;
       height: 1px;
       background-color: $gray-light;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     @media (min-width: $screen-sm) {

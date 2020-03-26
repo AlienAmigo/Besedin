@@ -1,4 +1,4 @@
-//- include mixins.pug
+include ../pug/mixins.pug
 
 doctype html
 html(class='page  no-js', lang='ru')
@@ -42,30 +42,43 @@ html(class='page  no-js', lang='ru')
                 -for(let i = 0; i < arrayNav.length; i++)
                   li.main-nav__item
                     a(href=`${arrayNav[i].url}`).main-nav__link= arrayNav[i].text
-              ul.social-links.social-links--menu
-                -for(let i = 0; i < arraySocialLinks.length; i++)
-                  li.social-links__item
-                    a(href=`${arraySocialLinks[i].url}`).social-links__link= arraySocialLinks[i].title
+              +social-links(arraySocialLinks,'social-links--menu')
 
         section.intro
           .intro__img-wrap
             img(src='img/work_block.png', alt='')
 
           .row
-            //- .col-xs-12
-            //-   p.page__text Владимир Беседин — режиссёр, продюсер и сценарист. Глава кинокомпании BUBBLE Studios (2015–2018). Режиссер и продюсер первого фильма по российским комиксам «Майор Гром».
-            //- .col-xs-12
+            .col-xs-12
+
+            .col-xs-12
+              p.page__text Владимир Беседин — режиссёр, продюсер и сценарист. Глава кинокомпании BUBBLE Studios (2015–2018). Режиссер и продюсер первого фильма по российским комиксам «Майор Гром».
+            .col-xs-12
+              p.page__text Учился сценарному мастерству у наставника лучших голивудских сценаристов – Роберта Макки («Код да Винчи», «Властелин Колец»). Окончил курсы голливудского сценариста и драмматурга – Нила Ландау («Парк Юркского периода», «Человек-Паук»).
+            .col-xs-12
+              p.page__text Получал профессиональные консультации у продюссеров крупнейших америакнских кинокомпаний: RatPac Entertainment, Silver Pictures, Getaway Productions, Disney и братьев Руссо – режиссеров крупнейших супергеройских боевиков Marvel Studios.
 
 
 
 
-        section.contacts
-          h2.page__title Хотите с нами работать? #[br] #[span.page__title--warning –] Свяжитесь с нами
+
+
+        section.news
+          .row
+            .col-xs-12
+              h2.page__title Новости
+
+        section.contacts.row(id='Contacts')
+          .col-xs-12
+            p.page__title Хотите с нами работать? #[br] #[span.page__title--warning –] Свяжитесь с нами
+            h3.contacts__title Контакты
+            p.contacts__text #[a.contacts__link(href='mailto:svstahneva@gmail.com') svstahneva@gmail.com] менеджер Светлана
 
 
       .page__footer-wrapper.container
-        .row
-          footer.col-xs-12.footer © 2020 #[span Владимир Беседин] Все права защищены.
+        footer.row
+          +social-links(arraySocialLinks, 'col-xs-4 col-sm-4 col-md-4 col-lg-4')
+          .footer.col-xs-12.col-sm-12.col-md-4.col-md-4 © 2020 #[span Владимир Беседин] Все права защищены.
 
 
 

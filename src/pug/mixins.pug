@@ -1,1 +1,6 @@
 //- Примеси
+mixin social-links(data, attr)
+  .social-links(class=attr)
+    -for(let i = 0; i < data.length; i++)
+      a(href=`${data[i].url}`, target='_blank').social-links__item
+        span(class=`${data[i].class}`)

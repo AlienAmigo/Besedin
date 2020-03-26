@@ -2,13 +2,25 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding-left: 30px;
-  padding-bottom: 40px;
-  list-style: none;
+  justify-content: flex-start;
+  margin-top: 20px;
+  // padding-left: 30px;
+  // padding-bottom: 40px;
+  // list-style: none;
+  order: 1;
+
+  @media(min-width: $screen-md) {
+    order: 2;
+    justify-content: center;
+  }
 
   &__item {
-    margin-right: 30px;
+    margin-right: 24px;
     @include ff-OpenSans(300, 10px, 13px);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -22,6 +34,8 @@
   }
 
   &--menu {
+    margin-left: 30px;
+    margin-bottom: 50px;
 
     @media (min-width: $screen-sm) {
       display: none;

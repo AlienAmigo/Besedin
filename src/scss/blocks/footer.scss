@@ -1,4 +1,6 @@
 .footer {
+  order: 2;
+  margin-top: 20px;
   margin-bottom: 40px;
   /* stylelint-ignore-next-line order */
   @include ff-OpenSans(400, 8px, 15px);
@@ -8,6 +10,7 @@
   }
 
   @media (min-width: $screen-sm) {
+    order: 1;
     margin-bottom: 50px;
     font-size: 10px;
   }
