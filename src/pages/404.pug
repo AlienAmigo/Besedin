@@ -1,0 +1,14 @@
+extends ../pug/layout.pug
+
+block content
+  .page-404__wrap
+    .row
+      .col-xs-12.col-sm-12.offset-md-4.col-md-8.offset-lg-4.col-lg-8
+        p.page-404__sorry Нам жаль
+      .col-xs-12.col-sm-12.col-md-6.offset-lg-1.col-lg-5
+        h1.page-404__title 404
+      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+        p.page-404__text Мы не смогли найти страницу, которую вы искали
+  .page-404__wrap-btn
+    .row
+      a.button(href='/') На главную
