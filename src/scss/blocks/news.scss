@@ -1,4 +1,13 @@
 .news {
+  margin-top: 75px;
+
+  @media(min-width: $screen-md) {
+    margin-top: 160px;
+  }
+
+  @media(min-width: $screen-lg) {
+    margin-top: 220px;
+  }
 
   &__gallery {
     display: flex;

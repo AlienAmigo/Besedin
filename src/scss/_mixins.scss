@@ -1,7 +1,7 @@
-@mixin psuedo($pos: absolute) {
+@mixin pseudo($pos: absolute) {
   content: '';
-  display: 'block';
-  position: absolute;
+  display: block;
+  position: $pos;
 }
 
 @mixin text-overflow() {
