@@ -27,16 +27,36 @@
   }
 
   &__title {
-    @include ff-OpenSansCondenced(300, 32px, 42px);
+    @include ff-OpenSansCondenced(300, 18px, 23px);
     text-transform: uppercase;
 
     &--warning {
       color: $warning-color;
     }
+
+    @media(min-width: $screen-md) {
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    @media(min-width: $screen-lg) {
+      font-size: 32px;
+      line-height: 42px;
+    }
   }
 
   &__text {
     margin-bottom: 30px;
-    @include ff-OpenSans(400, 16px, 25px);
+    @include ff-OpenSans(400, 10px, 15px);
+
+    @media(min-width: $screen-md) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    @media(min-width: $screen-lg) {
+      font-size: 16px;
+      line-height: 25px;
+    }
   }
 }

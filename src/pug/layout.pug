@@ -33,7 +33,7 @@ html(class='page  no-js', lang='ru')
         include data.pug
         .row
           header.header
-            a(href="/").header__link
+            a(href=`${siteRoot}`).header__link
               h1.header__title Владимир #[span Беседин]
             .header__burger(id='menu-burger')
               -for(let i = 0; i < 3; i++)
@@ -53,37 +53,3 @@ html(class='page  no-js', lang='ru')
 
     script(src='js/vendors.min.js')
     script(src='js/script.min.js')
-
-//- doctype html
-//- html(class='page  no-js', lang='ru')
-
-//-   head
-//-     meta(charset='utf-8')
-
-//-     block meta
-//-       title Home
-
-//-     block head
-//-       link(rel='stylesheet', href='css/style.css')
-//-       script.
-//-         document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-
-//-   body
-//-     noscript У вас отключен JavaScript. Это пугает.
-
-//-     .page__inner
-//-       .page__content
-
-//-         block header
-//-           p Шапка
-
-//-         block content
-//-           p Cодержимое
-
-//-       .page__footer-wrapper
-//-         block footer
-//-           p Подвал
-
-//-     block page-bottom
-//-       script(src='js/vendors.min.js')
-//-       script(src='js/script.min.js')

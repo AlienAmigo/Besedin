@@ -1,5 +1,8 @@
 extends ../pug/layout.pug
 
+block meta
+  title Владимир Беседин | 404
+
 block content
   .page-404__wrap
     .row
@@ -11,4 +14,4 @@ block content
         p.page-404__text Мы не смогли найти страницу, которую вы искали
   .page-404__wrap-btn
     .row
-      a.button(href='/') На главную
+      a.button(href=`${siteRoot}`) На главную
