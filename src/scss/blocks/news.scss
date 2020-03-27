@@ -1,5 +1,6 @@
 .news {
   margin-top: 75px;
+  overflow: hidden;
 
   @media(min-width: $screen-md) {
     margin-top: 160px;
@@ -14,6 +15,7 @@
     flex-direction: row;
     margin-top: 45px;
     margin-bottom: 100px;
+    overflow: hidden;
   }
 
   &__link {

@@ -126,4 +126,15 @@
       margin-bottom: 100px;
     }
   }
+
+  &__img4-wrap {
+
+    @media (min-width: $screen-md) {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-top: 30px;
+    }
+  }
 }
