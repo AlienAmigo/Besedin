@@ -72,6 +72,13 @@ $margin-lg:           60px;
   [class*='offset-'] {
     margin-left: 0;
   }
+
+  @for $i from $grid-col through 0 {
+
+    .order-xxs-#{$i} {
+      order: #{$i};
+    }
+  }
 }
 
 // ================= $screen-xs =================
@@ -87,23 +94,33 @@ $margin-lg:           60px;
     margin-right: $margin-xs;
   }
 
-  .hidden-xs {
-    display: none;
-  }
-
   @for $i from $grid-col through 1 {
 
     .col-xs-#{$i} {
       width: calc(100% * (#{$i} / #{$grid-col}));
     }
   }
+}
 
-  @for $i from $grid-col through 0 {
+@media(min-width: $screen-xs) and (max-width: $screen-sm) {
 
-    .offset-xs-#{$i} {
-      margin-left: calc(100% * (#{$i} / #{$grid-col}));
+    .hidden-xs {
+      display: none;
     }
-  }
+
+    @for $i from $grid-col through 0 {
+
+      .offset-xs-#{$i} {
+        margin-left: calc(100% * (#{$i} / #{$grid-col}));
+      }
+    }
+
+    @for $i from $grid-col through 0 {
+
+      .order-xs-#{$i} {
+        order: #{$i};
+      }
+    }
 }
 
 // ================= $screen-sm =================
@@ -119,21 +136,31 @@ $margin-lg:           60px;
     margin-right: $margin-sm;
   }
 
-  .hidden-sm {
-    display: none;
-  }
-
   @for $i from $grid-col through 1 {
 
     .col-sm-#{$i} {
       width: calc(100% * (#{$i} / #{$grid-col}));
     }
   }
+}
+
+@media(min-width: $screen-sm) and (max-width: $screen-md) {
+
+  .hidden-sm {
+    display: none;
+  }
 
   @for $i from $grid-col through 0 {
 
     .offset-sm-#{$i} {
       margin-left: calc(100% * (#{$i} / #{$grid-col}));
+    }
+  }
+
+  @for $i from $grid-col through 0 {
+
+    .order-sm-#{$i} {
+      order: #{$i};
     }
   }
 }
@@ -151,15 +178,18 @@ $margin-lg:           60px;
     margin-right: $margin-md;
   }
 
-  .hidden-md {
-    display: none;
-  }
-
   @for $i from $grid-col through 1 {
 
     .col-md-#{$i} {
       width: calc(100% * (#{$i} / #{$grid-col}));
     }
+  }
+}
+
+@media(min-width: $screen-md) and (max-width: $screen-lg) {
+
+  .hidden-md {
+    display: none;
   }
 
   @for $i from $grid-col through 0 {
@@ -168,10 +198,18 @@ $margin-lg:           60px;
       margin-left: calc(100% * (#{$i} / #{$grid-col}));
     }
   }
+
+  @for $i from $grid-col through 0 {
+
+    .order-md-#{$i} {
+      order: #{$i};
+    }
+  }
 }
 
-// ================= $screen-lg =================
-// ==============================================
+
+  // ================= $screen-lg =================
+  // ==============================================
 @media (min-width: $screen-lg) {
 
   .container {
@@ -198,6 +236,13 @@ $margin-lg:           60px;
 
     .offset-lg-#{$i} {
       margin-left: calc(100% * (#{$i} / #{$grid-col}));
+    }
+  }
+
+  @for $i from $grid-col through 0 {
+
+    .order-lg-#{$i} {
+      order: #{$i};
     }
   }
 }
