@@ -4,6 +4,12 @@
   position: absolute;
 }
 
+@mixin text-overflow() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 
 @mixin ff-OpenSans($fw: 400, $sz: $font-size, $lh: $line-height) {
   font-family: $font-family;
@@ -18,3 +24,4 @@
   font-size: $sz;
   line-height: $lh;
 }
+

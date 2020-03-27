@@ -1,5 +1,6 @@
 extends ../pug/layout.pug
 
+
 block meta
   title Владимир Беседин | Режиссёр, продюсер, сценарист
 
@@ -24,7 +25,13 @@ block content
     .row
       .col-xs-12
         h2.page__title Новости
-    .news-gallery
+  .news__gallery(id='news-slider')
+    -for(let i = 0; i < newsSlider.length; i++)
+      .news__slide
+        .news__slide-wrap
+          img(src=`${newsSlider[i].img}`, alt="")
+          a.news__slide-link(href=`${newsSlider[i].link}`)
+            p.news__slide-caption= newsSlider[i].title
 
 
   section.contacts.row(id='Contacts')

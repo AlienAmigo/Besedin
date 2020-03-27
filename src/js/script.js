@@ -28,4 +28,17 @@ ready(function(){
         toggleMenu();
     });
   }
+
+  // NEWS Slider
+
+  // $('#news-slider').slick({
+  //   infinite: true,
+  //   arrows: false,
+  //   // dots: false,
+  //   // centerMode: true,
+  //   variableWidth: true,
+  //   slidesToShow: 2,
+
+  // });
+
 });
