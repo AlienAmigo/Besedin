@@ -1170,9 +1170,16 @@ body {
     @media (min-width: 992px) {
       .intro__img3-wrap, .intro__img4-wrap {
         margin-bottom: 100px; } }
+  @media (min-width: 992px) {
+    .intro__img4-wrap {
+      margin-top: 20px; } }
+  @media (min-width: 992px) {
+    .intro__img4-wrap {
+      margin-top: 30px; } }
 
 .news {
-  margin-top: 75px; }
+  margin-top: 75px;
+  overflow: hidden; }
   @media (min-width: 992px) {
     .news {
       margin-top: 160px; } }
@@ -1188,7 +1195,8 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-top: 45px;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    overflow: hidden; }
   .news__link {
     color: #fbfbfb;
     text-decoration: none; }
