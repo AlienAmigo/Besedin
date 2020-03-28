@@ -815,6 +815,13 @@ body {
       font-size: 12px;
       line-height: 18px; } }
 
+.page__video-wrap {
+  overflow: hidden;
+  max-width: 100%; }
+  .page__video-wrap img {
+    width: 100%;
+    height: auto; }
+
 .page-404__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
