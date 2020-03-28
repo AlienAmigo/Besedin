@@ -112,4 +112,14 @@
       @include ff-OpenSans(400, 12px, 18px);
     }
   }
+
+  &__video-wrap {
+    overflow: hidden;
+    max-width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
