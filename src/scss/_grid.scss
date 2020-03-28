@@ -245,4 +245,12 @@ $margin-lg:           60px;
       order: #{$i};
     }
   }
+
+  @for $i from $grid-col through 0 {
+
+    .col-left-lg-#{$i} {
+      align-self: flex-start;
+      // width: calc((100vw - #{$screen-lg}) / 2 + + #{} + (#{i} * #{gap}));
+    }
+  }
 }

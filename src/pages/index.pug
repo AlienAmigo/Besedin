@@ -11,8 +11,10 @@ block content
       img(src='img/work_block.png', alt='')
 
     .row
-      .intro__img1-wrap.col-xs-12.col-sm-12.order-xxs-2.order-xs-2.order-sm-2.col-md-8
-        img(src='img/photo01.png', alt='')
+      .col-xs-12.col-sm-12.order-xxs-2.order-xs-2.order-sm-2.col-md-8
+        .page__ill-wrap.page__ill-wrap--margin-md
+          img(src='img/photo01.png', alt='')
+        .page__ill-caption Максим Малинин, Арсений Кан и Владимир Беседин на съёмках  тизера «Майор Гром: Чумной доктор»
 
       .col-xs-12.col-sm-12.order-xxs-1.order-xs-1.order-sm-1.col-md-4
         p.page__text(id='About') Владимир Беседин — режиссёр, продюсер и сценарист. Глава кинокомпании BUBBLE Studios (2015–2018). Режиссер и продюсер первого фильма по российским комиксам «Майор Гром».
@@ -42,27 +44,31 @@ block content
       .col-xs-12.col-sm-12.col-md-8.col-lg-8
         p.page__text Для создания саундтреков к фильмам о Майоре Громе работал с Романом Селивёрстовым, продюссером Red Hot Chili Peppers и обладателем Grammy – Райаном Хьюиттом и профессиональными музыкантами из студий «Abbey Road» в Лондоне и «Blackbird Studio» в Нешвилле.
       .col-xs-12.xol-sm-12.col-md-8.col-lg-8
-        .intro__img4-wrap
+        .page__ill-wrap
           img(src='img/photo04.png', alt='')
+        .page__ill-caption Оркестр «Abbey Roads» в процессе создания саундтреков к проектам «Майор Гром» и «Майор Гром: Чумной Доктор»
 
   section.projects(id='Projects')
     .row
       .col-xs-12
           h2.projects__title Проекты
-      .col-xs-3.col-sm-2.col-md-2.col-lg-2
-        h3.projects__tab-label.projects__tab-label--active(id='films') Фильмы
-      .col-xs-3.col-sm-2.col-md-2.col-lg-2
-        h3.projects__tab-label(id='clips') Клипы
-    .projects__tab-wrap
-      .projects__tab(id='tab-films')
-        .projects__item(id='film-grom')
+
+      -for(let i = 0; i < arrayTabs.length; i++)
+        .col-xs-3.col-sm-2.col-md-2.col-lg-2
+          h3.projects__tab-label(id=`${arrayTabs[i].id}`, class=`${(i == 0) ? 'projects__tab-label--active' : ''}`)= arrayTabs[i].title
+
+    .projects__tab-wrap(id='tab-films')
+      -for(let i = 0; i < arrayFilms.length; i++)
+        .projects__item(id=`${arrayFilms[i].id}`)
           .projects__item__wrap
-            img(src='img/tab_Grom.png', alt='')
-          .projects__item-title Фильм «Майор Гром»
-        .projects__item(id='film-doc')
-          .projects__item__wrap
-            img(src='img/tab_Doc.png', alt='')
-          .projects__item-title Тизер «Майор гром: чумной доктор»
+            img(src=`${arrayFilms[i].img}`, alt='')
+          .projects__item-title= arrayFilms[i].title
+        .project__tab-content
+          -if (i === 0)
+            include ../pug/tab-grom.pug
+          //- -if i === 1
+
+
 
   section.news
     .row

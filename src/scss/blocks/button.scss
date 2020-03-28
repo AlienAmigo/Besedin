@@ -23,4 +23,31 @@
   &:visited {
 
   }
+
+  &--const {
+    margin-bottom: 50px;
+    font-size: 30px;
+    padding: 4px 10px 7px 10px;
+  }
+
+  &-collapse {
+    position: relative;
+    right: 0;
+    margin-bottom: 25px;
+    padding-left: 26px;
+    font-size: 16px;
+    color: $gray-medium;
+    cursor: pointer;
+
+    &:before {
+      @include pseudo;
+      @extend .sprite-up;
+      top: 5px;
+      left: 0;
+    }
+
+    &:hover {
+      color: $text-color;
+    }
+  }
 }
