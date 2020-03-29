@@ -116,30 +116,17 @@
   }
 
   &__item-wrap {
-    display: none;
     width: 100%;
     height: auto;
 
     img {
       display: block;
       width: 100%;
-    }
-
-    &--active {
-      display: block;
-
-      & .projects__item-title {
-        display: none;
-      }
-    }
-
-    .&__item-title {
-      display: none;
+      height: auto;
     }
   }
 
   &__item-title {
-    display: none;
     position: absolute;
     left: 30px;
     bottom: 14px;

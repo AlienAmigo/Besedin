@@ -80,7 +80,7 @@ ready(function(){
   // const panelWrap = document.querySelectorAll('.projects__item__wrap');
   const contentPanel = document.querySelectorAll('.projects__tab-content');
   const activePanelClass = 'projects__tab-content--active';
-  const activeTrigClass = '.projects__item--active'
+  const activeTrigClass = 'projects__item--active'
   const collapseBtn = document.querySelectorAll('.button-collapse');
 
   panelTrigger.forEach(item => {
@@ -100,12 +100,17 @@ ready(function(){
     });
   });
 
-  // collapseBtn.forEach(item => {
-  //   item.addEventListener('click', () => {
-  //     panelTrigger.forEach(el => showTab(el, ));
-
-  //   });
-  // });
+  collapseBtn.forEach(item => {
+    item.addEventListener('click', () => {
+      let anchor = document.querySelector('#Projects')
+      panelTrigger.forEach(el => showTab(el, activeTrigClass));
+      contentPanel.forEach(el => closeTab(el, activePanelClass));
+      anchor.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
 
   // Плавная прокрутка
 
@@ -115,13 +120,13 @@ ready(function(){
     item.addEventListener('click', function (e) {
       e.preventDefault();
 
-      const blockID = item.getAttribute('href').substr(1)
+      const blockID = item.getAttribute('href').substr(1);
 
       document.getElementById(blockID).scrollIntoView({
         behavior: 'smooth',
         block: 'start'
-      })
-    })
+      });
+    });
   }
 
   // NEWS Slider
