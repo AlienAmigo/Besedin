@@ -77,6 +77,15 @@
     flex-direction: column;
   }
 
+  &__tab-wrap {
+    display: none;
+
+    &--active {
+      display: block;
+      translate: all 1s ease-in;
+    }
+  }
+
   &__item {
     position: relative;
     margin: 0;
@@ -141,6 +150,11 @@
   }
 
   &__tab-content {
+    display: none;
     margin-bottom: 25px;
+
+    &--active {
+      display: block;
+    }
   }
 }

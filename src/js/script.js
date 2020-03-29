@@ -38,6 +38,36 @@ ready(function(){
   mainNavLinks.forEach((item) => {
     item.addEventListener('click', ev => {
       closeMenu();
+      mainNavLinks.forEach(el => el.classList.remove('main-nav__link--active'));
+      ev.target.classList.add('main-nav__link--active');
+    });
+  });
+
+  // Табы
+  const tabLabels = document.querySelectorAll('.projects__tab-label');
+  const tabPanels = document.querySelectorAll('.projects__tab-wrap');
+
+  function closeTab(tab) {
+    tab.classList.remove('projects__tab-wrap--active');
+  }
+
+  function showTab(tab) {
+    tab.classList.add('projects__tab-wrap--active');
+  }
+
+  tabLabels.forEach(item => {
+    item.addEventListener('click', ev => {
+      let tabId = 'tab-' + item.id.match(/(?<=label-)(.+)/gim);
+      let selectedTab = document.querySelector('#'+tabId);
+      console.log(tabId);
+      if (!selectedTab.classList.contains('projects__tab-wrap--active')) {
+        tabPanels.forEach(item => closeTab(item));
+        showTab(selectedTab);
+        tabLabels.forEach(item => {
+          item.classList.remove('projects__tab-label--active');
+        });
+        item.classList.add('projects__tab-label--active');
+      }
     });
   });
 

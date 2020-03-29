@@ -57,16 +57,30 @@ block content
         .col-xs-3.col-sm-2.col-md-2.col-lg-2
           h3.projects__tab-label(id=`${arrayTabs[i].id}`, class=`${(i == 0) ? 'projects__tab-label--active' : ''}`)= arrayTabs[i].title
 
-    .projects__tab-wrap(id='tab-films')
+    .projects__tab-wrap.projects__tab-wrap--active(id='tab-films')
       -for(let i = 0; i < arrayFilms.length; i++)
         .projects__item(id=`${arrayFilms[i].id}`)
           .projects__item__wrap
             img(src=`${arrayFilms[i].img}`, alt='')
           .projects__item-title= arrayFilms[i].title
-        .project__tab-content
+        .projects__tab-content(class=`${(i === 0) ? 'projects__tab-content--active' : ''}`)
           -if (i === 0)
             include ../pug/tab-grom.pug
-          //- -if i === 1
+          -if (i === 1)
+            include ../pug/tab-doc.pug
+
+    .projects__tab-wrap(id='tab-clips')
+      p Тут клипы
+      //- -for(let i = 0; i < arrayFilms.length; i++)
+      //-   .projects__item(id=`${arrayFilms[i].id}`)
+      //-     .projects__item__wrap
+      //-       img(src=`${arrayFilms[i].img}`, alt='')
+      //-     .projects__item-title= arrayFilms[i].title
+      //-   .projects__tab-content(class=`${(i === 0) ? 'projects__tab-content--active' : ''}`)
+      //-     -if (i === 0)
+      //-       include ../pug/tab-grom.pug
+      //-     -if (i === 1)
+      //-       include ../pug/tab-doc.pug
 
 
 

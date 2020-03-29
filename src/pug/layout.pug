@@ -43,7 +43,10 @@ html(class='page  no-js', lang='ru')
               ul.main-nav__list
                 -for(let i = 0; i < arrayNav.length; i++)
                   li.main-nav__item
-                    a(href=`${arrayNav[i].url}`).main-nav__link= arrayNav[i].text
+                    a(
+                      href=`${arrayNav[i].url}`,
+                      class=`${(i === 0) ? 'main-nav__link--active' : ''}`
+                      ).main-nav__link= arrayNav[i].text
               +social-links(arraySocialLinks,'social-links--menu')
 
         block content

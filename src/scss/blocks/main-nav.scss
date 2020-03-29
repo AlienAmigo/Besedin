@@ -82,12 +82,39 @@
   }
 
   &__link {
+    position: relative;
     text-decoration: none;
     color: $text-color;
 
     &:visited {
       color: $text-color;
       text-decoration: none;
+    }
+
+    &:hover {
+      color: $gray-medium;
+    }
+
+    &--active {
+      cursor: default;
+
+      &:hover {
+        color: $text-color;
+      }
+
+      &:before {
+
+        @media(min-width: $screen-md) {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -4px;
+          width: 100%;
+          height: 1px;
+          background-color: $text-color;
+        }
+      }
     }
   }
 }
