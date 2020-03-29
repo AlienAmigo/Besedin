@@ -1477,6 +1477,7 @@ body {
     .projects__tab-wrap--active {
       display: block; }
   .projects__item {
+    display: none;
     position: relative;
     margin: 0;
     width: 100%;
@@ -1495,15 +1496,15 @@ body {
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
       cursor: pointer; }
+    .projects__item--active {
+      display: block; }
   .projects__item-wrap {
-    display: none;
     width: 100%;
     height: auto; }
     .projects__item-wrap img {
       display: block;
-      width: 100%; }
-    .projects__item-wrap--active {
-      display: block; }
+      width: 100%;
+      height: auto; }
   .projects__item-title {
     position: absolute;
     left: 30px;
