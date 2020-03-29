@@ -159,10 +159,11 @@
 
   &__tab-content {
     display: none;
+    flex-direction: column;
     margin-bottom: 25px;
 
     &--active {
-      display: block;
+      display: flex;
     }
   }
 }

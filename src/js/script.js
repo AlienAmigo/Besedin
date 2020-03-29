@@ -9,6 +9,13 @@ function ready(fn) {
 ready(function(){
   console.log('DOM ready');
 
+  // константы разрешений
+  const screen_xs = 480;
+  const screen_sm = 768;
+  const screen_md = 992;
+  const screen_slg = 1280;
+
+
   // Работа с главным меню
   const burgerMenu = document.querySelector('#menu-burger');
   const mainNav = document.querySelector('#main-nav');
@@ -49,12 +56,10 @@ ready(function(){
   const activeTabClass = 'projects__tab-wrap--active';
 
   function closeTab(tab, cl) {
-    // tab.classList.remove('projects__tab-wrap--active');
     tab.classList.remove(cl);
   }
 
   function showTab(tab, cl) {
-    // tab.classList.add('projects__tab-wrap--active');
     tab.classList.add(cl);
   }
 
@@ -62,7 +67,6 @@ ready(function(){
     item.addEventListener('click', ev => {
       let tabId = 'tab-' + item.id.match(/(?<=label-)(.+)/gim);
       let selectedTab = document.querySelector('#'+tabId);
-      // console.log(tabId);
       if (!selectedTab.classList.contains(activeTabClass)) {
         tabPanels.forEach(item => closeTab(item, activeTabClass));
         showTab(selectedTab, activeTabClass);
@@ -77,7 +81,6 @@ ready(function(){
   // Панели (содержимое табов)
 
   const panelTrigger = document.querySelectorAll('.projects__item');
-  // const panelWrap = document.querySelectorAll('.projects__item__wrap');
   const contentPanel = document.querySelectorAll('.projects__tab-content');
   const activePanelClass = 'projects__tab-content--active';
   const activeTrigClass = 'projects__item--active'
@@ -97,6 +100,10 @@ ready(function(){
       });
       closeTab(selectedTrigger, activeTrigClass);
       showTab(selectedPanel, activePanelClass);
+      selectedPanel.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     });
   });
 
@@ -131,14 +138,26 @@ ready(function(){
 
   // NEWS Slider
 
-  // $('#news-slider').slick({
-  //   infinite: true,
-  //   arrows: false,
-  //   // dots: false,
-  //   // centerMode: true,
-  //   variableWidth: true,
-  //   slidesToShow: 2,
-
-  // });
+  $('#news-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: false,
+    // centerMode: true,
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerPadding: '20px',
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        slidesToShow: 2,
+      },
+      {
+        breakpoint: 480,
+        slidesToShow: 1,
+      },
+    ],
+  });
 
 });

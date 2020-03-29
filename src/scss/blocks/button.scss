@@ -30,20 +30,43 @@
     padding: 4px 10px 7px 10px;
   }
 
+  &-collapse-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
   &-collapse {
     position: relative;
+    display: inline-block;
     right: 0;
-    margin-bottom: 25px;
+    margin: 25px auto;
     padding-left: 26px;
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 10px;
+    font-weight: 600;
     color: $gray-medium;
     cursor: pointer;
+
+    @media (min-width: $screen-md) {
+      font-size: 14px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 14px;
+    }
 
     &:before {
       @include pseudo;
       @extend .sprite-up;
-      top: 5px;
+      top: 2px;
       left: 0;
+      transform: scale(0.75);
+
+      @media (min-width: $screen-md) {
+        top: 4px;
+        transform: scale(1);
+      }
     }
 
     &:hover {

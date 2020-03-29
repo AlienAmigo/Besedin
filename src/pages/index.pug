@@ -87,16 +87,18 @@ block content
 
 
   section.news
-    .row
-      .col-xs-12
-        h2.page__title Новости
-  .news__gallery(id='news-slider')
-    -for(let i = 0; i < newsSlider.length; i++)
-      .news__slide
-        .news__slide-wrap
-          img(src=`${newsSlider[i].img}`, alt="")
-          a.news__slide-link(href=`${newsSlider[i].link}`)
-            p.news__slide-caption= newsSlider[i].title
+    .news-wrap
+      .row
+        .col-xs-12
+          h2.page__title Новости
+    .news__gallery
+      .news__gallery-wrap(id='news-slider')
+        -for(let i = 0; i < newsSlider.length; i++)
+          .news__slide
+            .news__slide-wrap
+              img(src=`${newsSlider[i].img}`, alt="")
+              a.news__slide-link(href=`${newsSlider[i].link}`)
+                p.news__slide-caption= newsSlider[i].title
 
 
   section.contacts.row(id='Contacts')
