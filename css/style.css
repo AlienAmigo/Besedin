@@ -1475,8 +1475,7 @@ body {
   .projects__tab-wrap {
     display: none; }
     .projects__tab-wrap--active {
-      display: block;
-      translate: all 1s ease-in; }
+      display: block; }
   .projects__item {
     position: relative;
     margin: 0;
@@ -1496,12 +1495,15 @@ body {
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
       cursor: pointer; }
-  .projects__item__wrap {
+  .projects__item-wrap {
+    display: none;
     width: 100%;
     height: auto; }
-    .projects__item__wrap img {
+    .projects__item-wrap img {
       display: block;
       width: 100%; }
+    .projects__item-wrap--active {
+      display: block; }
   .projects__item-title {
     position: absolute;
     left: 30px;
@@ -1755,6 +1757,26 @@ body {
           font-weight: 600;
           font-size: 30px;
           line-height: 35px; } }
+
+.tab__mayak-cadr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .tab__mayak-cadr-item {
+    margin-bottom: 50px; }
+    .tab__mayak-cadr-item img {
+      display: block;
+      width: 100%;
+      height: auto; }
 
 .contacts {
   margin-bottom: 100px; }
