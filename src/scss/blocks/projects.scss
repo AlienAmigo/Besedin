@@ -79,14 +79,17 @@
 
   &__tab-wrap {
     display: none;
+    // opacity: 0;
 
     &--active {
       display: block;
-      translate: all 1s ease-in;
+      // opacity: 1;
+      // translate: all 1s ease-in;
     }
   }
 
   &__item {
+    display: none;
     position: relative;
     margin: 0;
     width: 100%;
@@ -106,9 +109,14 @@
       background: rgba(0, 0, 0, 0.7);
       cursor: pointer;
     }
+
+    &--active {
+      display: block;
+    }
   }
 
-  &__item__wrap {
+  &__item-wrap {
+    display: none;
     width: 100%;
     height: auto;
 
@@ -116,9 +124,22 @@
       display: block;
       width: 100%;
     }
+
+    &--active {
+      display: block;
+
+      & .projects__item-title {
+        display: none;
+      }
+    }
+
+    .&__item-title {
+      display: none;
+    }
   }
 
   &__item-title {
+    display: none;
     position: absolute;
     left: 30px;
     bottom: 14px;

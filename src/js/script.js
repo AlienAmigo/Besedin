@@ -46,23 +46,26 @@ ready(function(){
   // Табы
   const tabLabels = document.querySelectorAll('.projects__tab-label');
   const tabPanels = document.querySelectorAll('.projects__tab-wrap');
+  const activeTabClass = 'projects__tab-wrap--active';
 
-  function closeTab(tab) {
-    tab.classList.remove('projects__tab-wrap--active');
+  function closeTab(tab, cl) {
+    // tab.classList.remove('projects__tab-wrap--active');
+    tab.classList.remove(cl);
   }
 
-  function showTab(tab) {
-    tab.classList.add('projects__tab-wrap--active');
+  function showTab(tab, cl) {
+    // tab.classList.add('projects__tab-wrap--active');
+    tab.classList.add(cl);
   }
 
   tabLabels.forEach(item => {
     item.addEventListener('click', ev => {
       let tabId = 'tab-' + item.id.match(/(?<=label-)(.+)/gim);
       let selectedTab = document.querySelector('#'+tabId);
-      console.log(tabId);
-      if (!selectedTab.classList.contains('projects__tab-wrap--active')) {
-        tabPanels.forEach(item => closeTab(item));
-        showTab(selectedTab);
+      // console.log(tabId);
+      if (!selectedTab.classList.contains(activeTabClass)) {
+        tabPanels.forEach(item => closeTab(item, activeTabClass));
+        showTab(selectedTab, activeTabClass);
         tabLabels.forEach(item => {
           item.classList.remove('projects__tab-label--active');
         });
@@ -70,6 +73,39 @@ ready(function(){
       }
     });
   });
+
+  // Панели (содержимое табов)
+
+  const panelTrigger = document.querySelectorAll('.projects__item');
+  // const panelWrap = document.querySelectorAll('.projects__item__wrap');
+  const contentPanel = document.querySelectorAll('.projects__tab-content');
+  const activePanelClass = 'projects__tab-content--active';
+  const activeTrigClass = '.projects__item--active'
+  const collapseBtn = document.querySelectorAll('.button-collapse');
+
+  panelTrigger.forEach(item => {
+    item.addEventListener('click', ev => {
+      // let wrapId = 'wrap-' + item.id;
+      let panelId = 'content-' + item.id;
+      let selectedPanel = document.querySelector('#' + panelId);
+      console.log(selectedPanel);
+      console.log(ev.target);
+      let selectedTrigger = ev.target;
+
+      contentPanel.forEach(item => {
+        closeTab(item, activePanelClass);
+      });
+      closeTab(selectedTrigger, activeTrigClass);
+      showTab(selectedPanel, activePanelClass);
+    });
+  });
+
+  // collapseBtn.forEach(item => {
+  //   item.addEventListener('click', () => {
+  //     panelTrigger.forEach(el => showTab(el, ));
+
+  //   });
+  // });
 
   // Плавная прокрутка
 

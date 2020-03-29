@@ -177,5 +177,20 @@
     }
   }
 
+  &__mayak-cadr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
+    &-item {
+      margin-bottom: 50px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
