@@ -89,6 +89,7 @@ function copyJsVendors() {
   return src([
       'node_modules/svg4everybody/dist/svg4everybody.min.js',
       dir.src + 'assets/jquery-3.4.1.min.js',
+      dir.src + 'assets/glide.min.js',
       dir.src + 'assets/slick.min.js',
       // 'js/'
     ])

@@ -91,6 +91,17 @@ block content
       .row
         .col-xs-12
           h2.page__title Новости
+    //- .news__gallery
+    //-   .glide(id='news-slider')
+    //-     .glide__track(data-glide-el="track")
+    //-       .glide__slides
+    //-         -for(let i = 0; i < newsSlider.length; i++)
+    //-           .glide__slide
+    //-             .news__slide-wrap
+    //-               img(src=`${newsSlider[i].img}`, alt="")
+    //-               a.news__slide-link(href=`${newsSlider[i].link}`)
+    //-                 p.news__slide-caption= newsSlider[i].title
+
     .news__gallery
       .news__gallery-wrap(id='news-slider')
         -for(let i = 0; i < newsSlider.length; i++)

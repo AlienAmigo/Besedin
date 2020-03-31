@@ -160,4 +160,32 @@ ready(function(){
     ],
   });
 
+  // let glide = new Glide('#news-slider', {
+  //   type: 'carousel',
+  //   focusAt: 'center',
+  //   perView: 3,
+  //   peek: {
+  //     before: 50,
+  //     after: 50
+  //   },
+  //   breakpoints: {
+  //     992: {
+  //       perView: 3,
+  //       peek: {
+  //         before: 25,
+  //         after: 25
+  //       },
+  //     },
+  //     480: {
+  //       perView: 1,
+  //       peek: {
+  //         before: 50,
+  //         after: 25
+  //       },
+  //     }
+  //   }
+  // })
+
+  glide.mount()
+  // ============
 });
