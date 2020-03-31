@@ -88,15 +88,15 @@ ready(function(){
 
   panelTrigger.forEach(item => {
     item.addEventListener('click', ev => {
-      // let wrapId = 'wrap-' + item.id;
       let panelId = 'content-' + item.id;
       let selectedPanel = document.querySelector('#' + panelId);
-      console.log(selectedPanel);
-      console.log(ev.target);
       let selectedTrigger = ev.target;
 
       contentPanel.forEach(item => {
         closeTab(item, activePanelClass);
+      });
+      panelTrigger.forEach(item => {
+        showTab(item, activeTrigClass);
       });
       closeTab(selectedTrigger, activeTrigClass);
       showTab(selectedPanel, activePanelClass);
@@ -138,27 +138,27 @@ ready(function(){
 
   // NEWS Slider
 
-  $('#news-slider').slick({
-    infinite: true,
-    arrows: false,
-    dots: false,
-    // centerMode: true,
-    focusOnSelect: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerPadding: '20px',
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        slidesToShow: 2,
-      },
-      {
-        breakpoint: 480,
-        slidesToShow: 1,
-      },
-    ],
-  });
+  // $('#news-slider').slick({
+  //   infinite: true,
+  //   arrows: false,
+  //   dots: false,
+  //   centerMode: true,
+  //   focusOnSelect: true,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   centerPadding: '20px',
+  //   variableWidth: true,
+  //   // responsive: [
+  //   //   {
+  //   //     breakpoint: 768,
+  //   //     slidesToShow: 2,
+  //   //   },
+  //   //   {
+  //   //     breakpoint: 480,
+  //   //     slidesToShow: 1,
+  //   //   },
+  //   // ],
+  // });
 
   // let glide = new Glide('#news-slider', {
   //   type: 'carousel',
@@ -169,23 +169,50 @@ ready(function(){
   //     after: 50
   //   },
   //   breakpoints: {
-  //     992: {
-  //       perView: 3,
-  //       peek: {
-  //         before: 25,
-  //         after: 25
-  //       },
-  //     },
-  //     480: {
-  //       perView: 1,
+  //     1280: {
+  //       perView: 2,
   //       peek: {
   //         before: 50,
+  //         after: 50
+  //       },
+  //     },
+  //     768: {
+  //       perView: 2,
+  //       peek: {
+  //         before: 25,
   //         after: 25
   //       },
   //     }
   //   }
   // })
 
-  glide.mount()
+  // glide.mount()
+
+    $(".owl-carousel").owlCarousel({
+      center:true,
+      loop: true,
+      stagePadding: 50,
+      responsive:{
+        0:{
+          items: 1,
+          stagePadding: 25,
+          center:true,
+          loop: true,
+        },
+        480:{
+          items: 2,
+          stagePadding: 15,
+          center:true,
+          loop: true,
+        },
+        768:{
+            items: 2
+        },
+        992:{
+            items: 3
+        }
+    }
+    });
+
   // ============
 });
