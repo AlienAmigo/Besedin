@@ -6,7 +6,23 @@ function ready(fn) {
   }
 }
 
+window.addEventListener('load', hidePreloader);
+
+// прелоадер загрузки контента
+function hidePreloader() {
+    console.log('Content loaded');
+    const preloader = document.querySelector('#preloader');
+    setInterval(() => {
+      preloader.style= 'opacity: 0';
+      setInterval(() => {
+        preloader.remove();
+      }, 1000);
+    }, 1000);
+}
+
+
 ready(function(){
+
   console.log('DOM ready');
 
   // константы разрешений
@@ -136,58 +152,6 @@ ready(function(){
     });
   }
 
-  // NEWS Slider
-
-  // $('#news-slider').slick({
-  //   infinite: true,
-  //   arrows: false,
-  //   dots: false,
-  //   centerMode: true,
-  //   focusOnSelect: true,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   centerPadding: '20px',
-  //   variableWidth: true,
-  //   // responsive: [
-  //   //   {
-  //   //     breakpoint: 768,
-  //   //     slidesToShow: 2,
-  //   //   },
-  //   //   {
-  //   //     breakpoint: 480,
-  //   //     slidesToShow: 1,
-  //   //   },
-  //   // ],
-  // });
-
-  // let glide = new Glide('#news-slider', {
-  //   type: 'carousel',
-  //   focusAt: 'center',
-  //   perView: 3,
-  //   peek: {
-  //     before: 50,
-  //     after: 50
-  //   },
-  //   breakpoints: {
-  //     1280: {
-  //       perView: 2,
-  //       peek: {
-  //         before: 50,
-  //         after: 50
-  //       },
-  //     },
-  //     768: {
-  //       perView: 2,
-  //       peek: {
-  //         before: 25,
-  //         after: 25
-  //       },
-  //     }
-  //   }
-  // })
-
-  // glide.mount()
-
     $(".owl-carousel").owlCarousel({
       center:true,
       loop: true,
@@ -214,5 +178,98 @@ ready(function(){
     }
     });
 
+
+  // РАБОТА С ВИДЕО
+
+
+  // //соединяемся с API Youtube
+  // let tag = document.createElement('script');
+  // tag.src = "https://www.youtube.com/iframe_api";
+  // let firstScriptTag = document.getElementsByTagName('script')[0];
+  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // function checkPosition(link){
+  //   //функция проверки видимости элемента на jquery
+  //   let div_position = $(link).offset();
+  //   let div_top = div_position.top;
+  //   let div_left = div_position.left;
+  //   let div_width = $(link).width();
+  //   let div_height = $(link).height();
+  //   let top_scroll = $(document).scrollTop();
+  //   let left_scroll = $(document).scrollLeft();
+  //   let screen_width = $(window).width();
+  //   let screen_height = $(window).height()+600;
+  //   let see_x1 = left_scroll;
+  //   let see_x2 = screen_width + left_scroll;
+  //   let see_y1 = top_scroll;
+  //   let see_y2 = screen_height + top_scroll;
+  //   let div_x1 = div_left;
+  //   let div_x2 = div_left + div_height;
+  //   let div_y1 = div_top;
+  //   let div_y2 = div_top + div_width;
+  //   if( div_x1 >= see_x1 && div_x2 <= see_x2 && div_y1 >= see_y1 && div_y2 <= see_y2 ) {
+  //   //если элемент видим на экране, запускаем видео Youtube
+  //     player.playVideo();
+  //   } else{
+  //   //если не видим, ставим видео на паузу
+  //     player.pauseVideo();
+  //   }
+  // }
+
+  // //запускаем функцию проверки видимости элемента
+  // $(document).scroll(function() {
+  //   checkPosition();
+  // });
+  // $(window).resize(function(){
+  //   checkPosition();
+  // });
+
+
+  // function onYouTubeIframeAPIReady() {
+  //   //рисуем видеопроигрыватель Youtube
+  //   player = new YT.Player('video-placeholder', {
+  //     width: 600,
+  //     height: 400, //размеры окна видео
+  //     playerVars: {
+  //       'autoplay': 1,
+  //       'controls': 0,
+  //       'showinfo': 0,
+  //       'rel': 0
+  //     }, //тонкие настройки видеопроигрывателя
+  //   videoId: 'fqesxT90x8g', //здесь id ролика
+  //   });
+  // }
+
+  // const dynamicVideo = $('.dynamic-video');
+  // const $window = $(window);
+
+  // $window.scroll(function() {
+
+  //   let $topOfVideo = dynamicVideo.offset().top;
+  //   let $bottomOfVideo = dynamicVideo.offset().top + dynamicVideo.outerHeight();
+
+  //   let $topOfScreen = $window.scrollTop();
+  //   let $bottomOfScreen = $window.scrollTop() + $window.innerHeight();
+
+  //   if(($bottomOfScreen > $bottomOfVideo) && ($topOfScreen < $topOfVideo)){
+  //     dynamicVideo[0].play();
+  //   } else {
+  //     dynamicVideo[0].pause();
+  //   }
+  // });
+
   // ============
+  // // const iFrames = document.querySelectorAll('iframe[src*="www.youtube.com"]');
+  // const iFrames = document.querySelectorAll('iframe');
+
+  // function setYouTubeWH(el) {
+  //   el.width = '100%';
+  //   let video_width = el.width;
+  //   el.css('height', video_width * 0.6, 'important');
+  // };
+
+  // iFrames.forEach(item => {
+  //   setYouTubeWH(item);
+  // });
+
 });
