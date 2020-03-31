@@ -1425,13 +1425,6 @@ body {
     .news {
       margin-top: 220px; } }
   .news__gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     margin-top: 45px;
     margin-bottom: 100px;
     overflow: hidden; }
