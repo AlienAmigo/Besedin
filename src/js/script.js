@@ -259,17 +259,24 @@ ready(function(){
   // });
 
   // ============
-  // // const iFrames = document.querySelectorAll('iframe[src*="www.youtube.com"]');
-  // const iFrames = document.querySelectorAll('iframe');
+  var $video = $('.video');
+  var $window = $(window);
+  $video[0].play();
 
-  // function setYouTubeWH(el) {
-  //   el.width = '100%';
-  //   let video_width = el.width;
-  //   el.css('height', video_width * 0.6, 'important');
-  // };
+  $window.scroll(function() {
 
-  // iFrames.forEach(item => {
-  //   setYouTubeWH(item);
-  // });
+    var $topOfVideo = $video.offset().top;
+    var $bottomOfVideo = $video.offset().top + $video.outerHeight();
+
+    var $topOfScreen = $window.scrollTop();
+    var $bottomOfScreen = $window.scrollTop() + $window.innerHeight();
+
+    if(($bottomOfScreen > $bottomOfVideo) && ($topOfScreen < $topOfVideo)){
+      $video[0].play();
+    } else {
+      $video[0].pause();
+    }
+
+  });
 
 });

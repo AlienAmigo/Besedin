@@ -7,8 +7,10 @@ block meta
 block content
 
   section.intro
-    .intro__head-wrap
-      img(src='img/work_block.png', alt='')
+    //- .intro__head-wrap
+    .page__video-wrap
+      video(class='video', loop='true', width='640', control)
+        source(src='video/main.webm', type='video/webm')
 
     .row
       .col-xs-12.col-sm-12.order-xxs-2.order-xs-2.order-sm-2.col-md-8
@@ -94,11 +96,11 @@ block content
 
     //- .news__gallery
     //-   .glide(id='news-slider')
-    //-     .glide__track(data-glide-el="track")
+    //-     .glide__track(data-glide-el='track')
     //-       .glide__slides
     //-         -for(let i = 0; i < newsSlider.length; i++)
     //-           .news__slide-wrap.glide__slide
-    //-             img(src=`${newsSlider[i].img}`, alt="")
+    //-             img(src=`${newsSlider[i].img}`, alt='')
     //-             a.news__slide-link(href=`${newsSlider[i].link}`)
     //-               p.news__slide-caption= newsSlider[i].title
 
@@ -107,7 +109,7 @@ block content
     //-     -for(let i = 0; i < newsSlider.length; i++)
     //-       .news__slide
     //-         .news__slide-wrap
-    //-           img(src=`${newsSlider[i].img}`, alt="")
+    //-           img(src=`${newsSlider[i].img}`, alt='')
     //-           a.news__slide-link(href=`${newsSlider[i].link}`)
     //-             p.news__slide-caption= newsSlider[i].title
     .news__gallery
@@ -115,7 +117,7 @@ block content
         -for(let i = 0; i < newsSlider.length; i++)
           .news__slide
             .news__slide-wrap
-              img(src=`${newsSlider[i].img}`, alt="")
+              img(src=`${newsSlider[i].img}`, alt='')
               a.news__slide-link(href=`${newsSlider[i].link}`)
                 p.news__slide-caption= newsSlider[i].title
 

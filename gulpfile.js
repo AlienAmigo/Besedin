@@ -104,6 +104,12 @@ function copyImages() {
 }
 exports.copyImages = copyImages;
 
+function copyVideo() {
+  return src(dir.src + 'video/**/*.webm')
+    .pipe(dest(dir.build + 'video/'));
+}
+exports.copyVideo = copyVideo;
+
 function copyFonts() {
   return src(dir.src + 'fonts/*.{ttf,eot,svg,woff,woff2}')
     .pipe(dest(dir.build + 'fonts/'));
@@ -141,6 +147,6 @@ function serve() {
 
 exports.default = series(
   clean,
-  parallel(compileStyles, compilePug, processJs, copyJsVendors, copyImages, copyFonts),
+  parallel(compileStyles, compilePug, processJs, copyJsVendors, copyImages, copyVideo, copyFonts),
   serve
 );
