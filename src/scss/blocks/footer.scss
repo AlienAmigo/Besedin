@@ -14,4 +14,11 @@
     margin-bottom: 50px;
     font-size: 10px;
   }
+
+  @media (min-width: $screen-sm) {
+    order: 1;
+    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 15px;
+  }
 }

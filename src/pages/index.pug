@@ -7,10 +7,13 @@ block meta
 block content
 
   section.intro
-    //- .intro__head-wrap
-    .page__video-wrap
-      video(class='video', loop='true', width='640', control)
-        source(src='video/main.webm', type='video/webm')
+    .row
+      .col-xs-12
+        //- .intro__head-wrap
+        .page__video-wrap.page__video-wrap--main
+          //- img(src='img/work_block.png')
+          video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
+            source(src='video/main.webm', type='video/webm')
 
     .row
       .col-xs-12.col-sm-12.order-xxs-2.order-xs-2.order-sm-2.col-md-8
@@ -19,16 +22,20 @@ block content
         .page__ill-caption Максим Малинин, Арсений Кан и Владимир Беседин на съёмках  тизера «Майор Гром: Чумной доктор»
 
       .col-xs-12.col-sm-12.order-xxs-1.order-xs-1.order-sm-1.col-md-4
-        p.page__text(id='About') Владимир Беседин — режиссёр, продюсер и сценарист. Глава кинокомпании BUBBLE Studios (2015–2018). Режиссер и продюсер первого фильма по российским комиксам «Майор Гром».
+        p.page__text(id='About') Владимир Беседин&nbsp;— режиссёр, продюсер и&nbsp;сценарист. Глава кинокомпании BUBBLE Studios (2015–2018). Режиссер и&nbsp;продюсер первого фильма по российским комиксам «Майор Гром».
 
     .row
       .col-xs-12.col-sm-12.col-md-12.col-md-12
-        p.page__text Учился сценарному мастерству у наставника лучших голливудских сценаристов — Роберта Макки («Код да Винчи», «Властелин Колец»). Окончил курсы голливудского сценариста и драмматурга — Нила Ландау («Парк Юркского периода», «Человек-Паук»).
-        p.page__text Получал профессиональные консультации у продюссеров крупнейших американских кинокомпаний: RatPac Entertainment, Silver Pictures, Getaway Productions, Disney и братьев Руссо — режиссёров крупнейших супергеройских боевиков Marvel Studios.
-        h3.page__title.intro__subtitle Подход к съёмке
-        p.page__text Реализует сложные технические решения для создания действительно эффектных экшн-сцен. На съёмках «Майора Грома», придумал технику «360 градусов».
-    .intro__wrap-360
-      img(src='img/work_block2.png', alt='')
+        p.page__text Учился сценарному мастерству у наставника лучших голливудских сценаристов&nbsp;— Роберта Макки («Код да Винчи», «Властелин Колец»). Окончил курсы голливудского сценариста и&nbsp;драмматурга&nbsp;— Нила Ландау («Парк Юркского периода», «Человек-Паук»).
+        p.page__text Получал профессиональные консультации у продюссеров крупнейших американских кинокомпаний: RatPac Entertainment, Silver Pictures, Getaway Productions, Disney и&nbsp;братьев Руссо&nbsp;— режиссёров крупнейших супергеройских боевиков Marvel Studios.
+        h3.page__title.intro__subtitle Подход к&nbsp;съёмке
+        p.page__text Реализует сложные технические решения для создания действительно эффектных экшн-сцен. На&nbsp;съёмках «Майора Грома», придумал технику «360 градусов».
+      .col-xs-12
+        .page__video-wrap.page__video-wrap--01
+          video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
+            source(src='video/01.webm', type='video/webm')
+        //- .intro__wrap-360
+        //-   img(src='img/work_block2.png', alt='')
     .row
       .col-xs-12.col-sm-12.order-xxs-2.order-xs-2.order-sm-2.col-md-8.col-lg-8
         .intro__img2-wrap
@@ -36,19 +43,24 @@ block content
       .col-xs-12.col-sm-12.order-xxs-1.order-xs-1.order-sm-1.col-md-4.col-lg-4
         p.page__text.page__text--padding-left Для съёмок экшн-сцены «Майор Гром: Чумной доктор» была создана техника проезда камеры сквозь автомобили.
       .col-xs-12.col-sm-12.col-md-8.col-lg-8
-        p.page__text Один из немногих российских режиссёров, который работает с раскадровками и сам разрабатывает цветокорекцию.
-    .intro__wrap-color
-      img(src='img/work_block3.png', alt='')
+        p.page__text Один из немногих российских режиссёров, который работает с&nbsp;раскадровками и&nbsp;сам разрабатывает цветокорекцию.
+    .row
+      .col-xs-12
+        //-   .intro__wrap-color
+        //-     img(src='img/work_block3.png', alt='')
+        .page__video-wrap
+          video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
+            source(src='video/02.webm', type='video/webm')
     .row
       .col-xs-12.xol-sm-12.col-md-8.col-lg-8
         .intro__img3-wrap
           img(src='img/photo03.png', alt='')
       .col-xs-12.col-sm-12.col-md-8.col-lg-8
-        p.page__text Для создания саундтреков к фильмам о Майоре Громе работал с Романом Селивёрстовым, продюссером Red Hot Chili Peppers и обладателем Grammy – Райаном Хьюиттом и профессиональными музыкантами из студий «Abbey Road» в Лондоне и «Blackbird Studio» в Нешвилле.
+        p.page__text Для создания саундтреков к&nbsp;фильмам о&nbsp;Майоре Громе работал с&nbsp;Романом Селивёрстовым, продюссером Red Hot Chili Peppers и&nbsp;обладателем Grammy&nbsp;— Райаном Хьюиттом и&nbsp;профессиональными музыкантами из студий «Abbey Road» в&nbsp;Лондоне и&nbsp;«Blackbird Studio» в&nbsp;Нешвилле.
       .col-xs-12.xol-sm-12.col-md-8.col-lg-8
         .page__ill-wrap
           img(src='img/photo04.png', alt='')
-        .page__ill-caption Оркестр «Abbey Roads» в процессе создания саундтреков к проектам «Майор Гром» и «Майор Гром: Чумной Доктор»
+        .page__ill-caption Оркестр «Abbey Roads» в&nbsp;процессе создания саундтреков к&nbsp;проектам «Майор Гром» и&nbsp;«Майор Гром: Чумной Доктор»
 
   section.projects(id='Projects')
     .row
@@ -62,30 +74,34 @@ block content
     //- FILMS
     .projects__tab-wrap.projects__tab-wrap--active(id='tab-films')
       -for(let i = 0; i < arrayFilms.length; i++)
-        .projects__item.projects__item--active(id=`${arrayFilms[i].id}`)
-          .projects__item-wrap(id=`trig-${arrayFilms[i].id}`)
-            img(src=`${arrayFilms[i].img}`, alt='')
-          .projects__item-title= arrayFilms[i].title
-        //- .projects__tab-content(id=`content-${arrayFilms[i].id}`, class=`${(i === 0) ? 'projects__tab-content--active' : ''}`)
-        .projects__tab-content(id=`content-${arrayFilms[i].id}`)
-          -if (i === 0)
-            include ../pug/tab-grom.pug
-          -if (i === 1)
-            include ../pug/tab-doc.pug
+        .row
+          .col-xs-12
+            .projects__item.projects__item--active(id=`${arrayFilms[i].id}`)
+              .projects__item-wrap(id=`trig-${arrayFilms[i].id}`)
+                img(src=`${arrayFilms[i].img}`, alt='')
+              .projects__item-title= arrayFilms[i].title
+            //- .projects__tab-content(id=`content-${arrayFilms[i].id}`, class=`${(i === 0) ? 'projects__tab-content--active' : ''}`)
+            .projects__tab-content(id=`content-${arrayFilms[i].id}`)
+              -if (i === 0)
+                include ../pug/tab-grom.pug
+              -if (i === 1)
+                include ../pug/tab-doc.pug
 
     //- CLIPS
     .projects__tab-wrap(id='tab-clips')
       -for(let i = 0; i < arrayClips.length; i++)
-        .projects__item.projects__item--active(id=`${arrayClips[i].id}`)
-          .projects__item-wrap(id=`trig-${arrayClips[i].id}`)
-            img(src=`${arrayClips[i].img}`, alt='')
-          .projects__item-title= arrayClips[i].title
-        //- .projects__tab-content(id=`content-${arrayClips[i].id}`, class=`${(i === 0) ? 'projects__tab-content--active' : ''}`)
-        .projects__tab-content(id=`content-${arrayClips[i].id}`)
-          -if (i === 0)
-            include ../pug/trab-mayak.pug
-          -if (i === 1)
-            include ../pug/tab-bit.pug
+        .row
+          .col-xs-12
+            .projects__item.projects__item--active(id=`${arrayClips[i].id}`)
+              .projects__item-wrap(id=`trig-${arrayClips[i].id}`)
+                img(src=`${arrayClips[i].img}`, alt='')
+              .projects__item-title= arrayClips[i].title
+            //- .projects__tab-content(id=`content-${arrayClips[i].id}`, class=`${(i === 0) ? 'projects__tab-content--active' : ''}`)
+            .projects__tab-content(id=`content-${arrayClips[i].id}`)
+              -if (i === 0)
+                include ../pug/trab-mayak.pug
+              -if (i === 1)
+                include ../pug/tab-bit.pug
 
 
   section.news
@@ -93,38 +109,39 @@ block content
       .row
         .col-xs-12
           h2.page__title Новости
+        .col-xs-12
 
-    //- .news__gallery
-    //-   .glide(id='news-slider')
-    //-     .glide__track(data-glide-el='track')
-    //-       .glide__slides
-    //-         -for(let i = 0; i < newsSlider.length; i++)
-    //-           .news__slide-wrap.glide__slide
-    //-             img(src=`${newsSlider[i].img}`, alt='')
-    //-             a.news__slide-link(href=`${newsSlider[i].link}`)
-    //-               p.news__slide-caption= newsSlider[i].title
+          //- .news__gallery
+          //-   .glide(id='news-slider')
+          //-     .glide__track(data-glide-el='track')
+          //-       .glide__slides
+          //-         -for(let i = 0; i < newsSlider.length; i++)
+          //-           .news__slide-wrap.glide__slide
+          //-             img(src=`${newsSlider[i].img}`, alt='')
+          //-             a.news__slide-link(href=`${newsSlider[i].link}`)
+          //-               p.news__slide-caption= newsSlider[i].title
 
-    //- .news__gallery
-    //-   .news__gallery-wrap(id='news-slider')
-    //-     -for(let i = 0; i < newsSlider.length; i++)
-    //-       .news__slide
-    //-         .news__slide-wrap
-    //-           img(src=`${newsSlider[i].img}`, alt='')
-    //-           a.news__slide-link(href=`${newsSlider[i].link}`)
-    //-             p.news__slide-caption= newsSlider[i].title
-    .news__gallery
-      .news__gallery-wrap.owl-carousel(id='news-slider')
-        -for(let i = 0; i < newsSlider.length; i++)
-          .news__slide
-            .news__slide-wrap
-              img(src=`${newsSlider[i].img}`, alt='')
-              a.news__slide-link(href=`${newsSlider[i].link}`)
-                p.news__slide-caption= newsSlider[i].title
+          //- .news__gallery
+          //-   .news__gallery-wrap(id='news-slider')
+          //-     -for(let i = 0; i < newsSlider.length; i++)
+          //-       .news__slide
+          //-         .news__slide-wrap
+          //-           img(src=`${newsSlider[i].img}`, alt='')
+          //-           a.news__slide-link(href=`${newsSlider[i].link}`)
+          //-             p.news__slide-caption= newsSlider[i].title
+          .news__gallery
+            .news__gallery-wrap.owl-carousel(id='news-slider')
+              -for(let i = 0; i < newsSlider.length; i++)
+                .news__slide
+                  .news__slide-wrap
+                    img(src=`${newsSlider[i].img}`, alt='')
+                    a.news__slide-link(href=`${newsSlider[i].link}`)
+                      p.news__slide-caption= newsSlider[i].title
 
 
   section.contacts.row(id='Contacts')
     .col-xs-12
-      p.page__title Хотите с нами работать? #[br] #[span.page__title--warning –] Свяжитесь с менеджером
+      p.page__title Хотите с нами работать? #[br] #[span.page__title--warning –] Свяжитесь с&nbsp;менеджером
       h2.contacts__title Контакты
       p.contacts__text #[a.contacts__link(href='mailto:svstahneva@gmail.com') svstahneva@gmail.com] менеджер Светлана
 

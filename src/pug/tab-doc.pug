@@ -24,8 +24,11 @@
 
     .col-sm-12.col-xs-12.col-md-8
       p.page__text После зрительского успеха техники  «360 градусов» в  «Майое Громе» был придуман и воплощен приём съемки, где камера пролетает сквозь автомобили.
-.page__video-wrap
-  img(src='img/block_doc.png', alt='')
+  .row
+    .col-xs-12
+      .page__video-wrap.page__video-wrap--05
+        video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
+          source(src='video/05.webm', type='video/webm')
 
   .button-collapse-wrap.col-xs-12.col-sm-12.col-md-2.offset-md-2.col-lg-1.offset-lg-11
     .button-collapse Свернуть

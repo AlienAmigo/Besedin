@@ -6,7 +6,41 @@ function ready(fn) {
   }
 }
 
-window.addEventListener('load', hidePreloader);
+window.addEventListener('load', load);
+
+function load() {
+  // hidePreloader();
+
+  const myVids = document.querySelectorAll('.video');
+  window.addEventListener('scroll', () =>  {
+    myVids.forEach(vid => {
+      let targetPosition = {
+        top: window.pageYOffset + vid.getBoundingClientRect().top,
+        left: window.pageXOffset + vid.getBoundingClientRect().left,
+        right: window.pageXOffset + vid.getBoundingClientRect().right,
+        bottom: window.pageYOffset + vid.getBoundingClientRect().bottom
+      },
+      // Получаем позиции окна
+      windowPosition = {
+        top: window.pageYOffset,
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+      };
+
+      if (targetPosition.top > windowPosition.top &&
+        targetPosition.bottom < windowPosition.bottom ) {
+        // Если элемент полностью видно, то запускаем следующий код
+        vid.play();
+      } else {
+        // Если элемент не видно, то запускаем этот код
+        vid.pause();
+      };
+    });
+  });
+
+};
+
 
 // прелоадер загрузки контента
 function hidePreloader() {
@@ -181,102 +215,5 @@ ready(function(){
 
   // РАБОТА С ВИДЕО
 
-
-  // //соединяемся с API Youtube
-  // let tag = document.createElement('script');
-  // tag.src = "https://www.youtube.com/iframe_api";
-  // let firstScriptTag = document.getElementsByTagName('script')[0];
-  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // function checkPosition(link){
-  //   //функция проверки видимости элемента на jquery
-  //   let div_position = $(link).offset();
-  //   let div_top = div_position.top;
-  //   let div_left = div_position.left;
-  //   let div_width = $(link).width();
-  //   let div_height = $(link).height();
-  //   let top_scroll = $(document).scrollTop();
-  //   let left_scroll = $(document).scrollLeft();
-  //   let screen_width = $(window).width();
-  //   let screen_height = $(window).height()+600;
-  //   let see_x1 = left_scroll;
-  //   let see_x2 = screen_width + left_scroll;
-  //   let see_y1 = top_scroll;
-  //   let see_y2 = screen_height + top_scroll;
-  //   let div_x1 = div_left;
-  //   let div_x2 = div_left + div_height;
-  //   let div_y1 = div_top;
-  //   let div_y2 = div_top + div_width;
-  //   if( div_x1 >= see_x1 && div_x2 <= see_x2 && div_y1 >= see_y1 && div_y2 <= see_y2 ) {
-  //   //если элемент видим на экране, запускаем видео Youtube
-  //     player.playVideo();
-  //   } else{
-  //   //если не видим, ставим видео на паузу
-  //     player.pauseVideo();
-  //   }
-  // }
-
-  // //запускаем функцию проверки видимости элемента
-  // $(document).scroll(function() {
-  //   checkPosition();
-  // });
-  // $(window).resize(function(){
-  //   checkPosition();
-  // });
-
-
-  // function onYouTubeIframeAPIReady() {
-  //   //рисуем видеопроигрыватель Youtube
-  //   player = new YT.Player('video-placeholder', {
-  //     width: 600,
-  //     height: 400, //размеры окна видео
-  //     playerVars: {
-  //       'autoplay': 1,
-  //       'controls': 0,
-  //       'showinfo': 0,
-  //       'rel': 0
-  //     }, //тонкие настройки видеопроигрывателя
-  //   videoId: 'fqesxT90x8g', //здесь id ролика
-  //   });
-  // }
-
-  // const dynamicVideo = $('.dynamic-video');
-  // const $window = $(window);
-
-  // $window.scroll(function() {
-
-  //   let $topOfVideo = dynamicVideo.offset().top;
-  //   let $bottomOfVideo = dynamicVideo.offset().top + dynamicVideo.outerHeight();
-
-  //   let $topOfScreen = $window.scrollTop();
-  //   let $bottomOfScreen = $window.scrollTop() + $window.innerHeight();
-
-  //   if(($bottomOfScreen > $bottomOfVideo) && ($topOfScreen < $topOfVideo)){
-  //     dynamicVideo[0].play();
-  //   } else {
-  //     dynamicVideo[0].pause();
-  //   }
-  // });
-
-  // ============
-  var $video = $('.video');
-  var $window = $(window);
-  $video[0].play();
-
-  $window.scroll(function() {
-
-    var $topOfVideo = $video.offset().top;
-    var $bottomOfVideo = $video.offset().top + $video.outerHeight();
-
-    var $topOfScreen = $window.scrollTop();
-    var $bottomOfScreen = $window.scrollTop() + $window.innerHeight();
-
-    if(($bottomOfScreen > $bottomOfVideo) && ($topOfScreen < $topOfVideo)){
-      $video[0].play();
-    } else {
-      $video[0].pause();
-    }
-
-  });
 
 });
