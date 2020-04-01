@@ -103,6 +103,7 @@
 
         @media(min-width: $screen-sm) {
           opacity: 1;
+          animation-name: BounceInRight;
         }
       }
     }

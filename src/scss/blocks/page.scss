@@ -129,7 +129,43 @@
     overflow: hidden;
 
     &--main {
+      padding-bottom: 40%;
+
+    }
+    &--01 {
       padding-bottom: 37.5%;
+    }
+
+    &--02 {
+      padding-bottom: 40.625%;
+    }
+
+    &--03 {
+      padding-bottom: 55%;
+    }
+
+    &--04 {
+      padding-bottom: 36.875%;
+    }
+
+    &--05 {
+      padding-bottom: 40.625%;
+    }
+
+    &--06 {
+      padding-bottom: 41.25%;
+    }
+
+    &--07 {
+      padding-bottom: 41.25%;
+    }
+
+    &--08 {
+      padding-bottom: 40.625%;
+    }
+
+    &--chrome {
+      padding-bottom: 55%;
     }
 
     & iframe,

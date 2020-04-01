@@ -1,5 +1,7 @@
-// @import '../assets/_variables.scss';
-// @import '../assets/glide.core.scss';
+// Glide
+@import '../assets/glide.core.scss';
+// Owl Carousel
+@import '../assets/_variables.scss';
 @import '../assets/_animate.scss';
 @import '../assets/_autoheight.scss';
 @import '../assets/_lazyload.scss';
@@ -7,7 +9,10 @@
 @import '../assets/_video.scss';
 @import '../assets/_core.scss';
 // @import '../assets/owl.carousel.scss';
+// Slick
 // @import '../assets/slick.scss';
+// ===============================
+@import 'animate';
 @import 'fonts';
 @import 'grid';
 @import 'variables';
