@@ -65,6 +65,7 @@
 
     &:hover {
       color: $gray-medium;
+      opacity: 0.75;
     }
 
     @media(min-width: $screen-md) {

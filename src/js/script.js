@@ -6,54 +6,6 @@ function ready(fn) {
   }
 }
 
-window.addEventListener('load', load);
-
-function load() {
-  // hidePreloader();
-
-  const myVids = document.querySelectorAll('.video');
-  window.addEventListener('scroll', () =>  {
-    myVids.forEach(vid => {
-      let targetPosition = {
-        top: window.pageYOffset + vid.getBoundingClientRect().top,
-        left: window.pageXOffset + vid.getBoundingClientRect().left,
-        right: window.pageXOffset + vid.getBoundingClientRect().right,
-        bottom: window.pageYOffset + vid.getBoundingClientRect().bottom
-      },
-      // Получаем позиции окна
-      windowPosition = {
-        top: window.pageYOffset,
-        left: window.pageXOffset,
-        right: window.pageXOffset + document.documentElement.clientWidth,
-        bottom: window.pageYOffset + document.documentElement.clientHeight
-      };
-
-      if (targetPosition.top > windowPosition.top &&
-        targetPosition.bottom < windowPosition.bottom ) {
-        // Если элемент полностью видно, то запускаем следующий код
-        vid.play();
-      } else {
-        // Если элемент не видно, то запускаем этот код
-        vid.pause();
-      };
-    });
-  });
-
-};
-
-
-// прелоадер загрузки контента
-function hidePreloader() {
-    console.log('Content loaded');
-    const preloader = document.querySelector('#preloader');
-    setInterval(() => {
-      preloader.style= 'opacity: 0';
-      setInterval(() => {
-        preloader.remove();
-      }, 1000);
-    }, 1000);
-}
-
 
 ready(function(){
 
@@ -200,42 +152,131 @@ ready(function(){
       e.preventDefault();
 
       const blockID = item.getAttribute('href').substr(1);
+      const targetElem = document.getElementById(blockID);
 
       document.getElementById(blockID).scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
+
+      let targetCoordinates = targetElem.getBoundingClientRect().top;
+
+      console.log(targetCoordinates);
+
+
+      window.scrollBy({
+        top: targetCoordinates - 90,
+        left: 0,
+        behavior: 'smooth'
+      });
     });
   }
 
-    $(".owl-carousel").owlCarousel({
-      center:true,
-      loop: true,
-      stagePadding: 50,
-      responsive:{
-        0:{
-          items: 1,
-          stagePadding: 25,
-          center:true,
-          loop: true,
+  // Карусель Новостей
+    // $("news-slider").owlCarousel({
+    //   center:true,
+    //   loop: true,
+    //   stagePadding: 50,
+    //   responsive:{
+    //     0:{
+    //       items: 1,
+    //       stagePadding: 25,
+    //       center:true,
+    //       loop: true,
+    //     },
+    //     480:{
+    //       items: 2,
+    //       stagePadding: 15,
+    //       center:true,
+    //       loop: true,
+    //     },
+    //     768:{
+    //         items: 2
+    //     },
+    //     992:{
+    //         items: 3
+    //     }
+    //   }
+    // });
+
+    let newsGallery = new Glide('#news-slider', {
+      type: 'carousel',
+      startAt: 0,
+      perView: 3,
+      gap: 16,
+      breakpoints: {
+        1280: {
+          perView: 3,
+          gap: 19,
+          peek: 0
         },
-        480:{
-          items: 2,
-          stagePadding: 15,
-          center:true,
-          loop: true,
+        992: {
+          perView: 2,
+          gap: 20,
+          peek: 111
         },
-        768:{
-            items: 2
+        768: {
+          perView: 1,
+          gap: 20,
+          peek: 78
         },
-        992:{
-            items: 3
+        480: {
+          perView: 1
         }
-    }
+      }
     });
+
+    newsGallery.mount();
 
 
   // РАБОТА С ВИДЕО
 
+  function load() {
+    // hidePreloader();
+
+    const myVids = document.querySelectorAll('.video');
+    window.addEventListener('scroll', () =>  {
+      myVids.forEach(vid => {
+        let targetPosition = {
+          top: window.pageYOffset + vid.getBoundingClientRect().top,
+          left: window.pageXOffset + vid.getBoundingClientRect().left,
+          right: window.pageXOffset + vid.getBoundingClientRect().right,
+          bottom: window.pageYOffset + vid.getBoundingClientRect().bottom
+        },
+        // Получаем позиции окна
+        windowPosition = {
+          top: window.pageYOffset,
+          left: window.pageXOffset,
+          right: window.pageXOffset + document.documentElement.clientWidth,
+          bottom: window.pageYOffset + document.documentElement.clientHeight
+        };
+
+        if (targetPosition.top > windowPosition.top &&
+          targetPosition.bottom < windowPosition.bottom) {
+          // Если элемент полностью видно, то запускаем следующий код
+          vid.play();
+        } else {
+          // Если элемент не видно, то запускаем этот код
+          vid.pause();
+        };
+      });
+    });
+
+  };
+
+
+  // прелоадер загрузки контента
+  function hidePreloader() {
+      console.log('Content loaded');
+      const preloader = document.querySelector('#preloader');
+      setInterval(() => {
+        preloader.style= 'opacity: 0';
+        setInterval(() => {
+          preloader.remove();
+        }, 1000);
+      }, 1000);
+  }
+
+  window.addEventListener('load', load);
 
 });

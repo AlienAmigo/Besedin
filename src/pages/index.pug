@@ -12,7 +12,7 @@ block content
         //- .intro__head-wrap
         .page__video-wrap.page__video-wrap--main
           //- img(src='img/work_block.png')
-          video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
+          video(class='video', autoplay='autoplay', loop='loop', width='640', preload='auto', control)
             source(src='video/main.webm', type='video/webm')
 
     .row
@@ -32,7 +32,7 @@ block content
         p.page__text Реализует сложные технические решения для создания действительно эффектных экшн-сцен. На&nbsp;съёмках «Майора Грома», придумал технику «360 градусов».
       .col-xs-12
         .page__video-wrap.page__video-wrap--01
-          video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
+          video(class='video', autoplay='autoplay', loop='loop', width='640', preload='none', control)
             source(src='video/01.webm', type='video/webm')
         //- .intro__wrap-360
         //-   img(src='img/work_block2.png', alt='')
@@ -49,7 +49,7 @@ block content
         //-   .intro__wrap-color
         //-     img(src='img/work_block3.png', alt='')
         .page__video-wrap
-          video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
+          video(class='video', autoplay='autoplay', loop='loop', width='640', preload='none', control)
             source(src='video/02.webm', type='video/webm')
     .row
       .col-xs-12.xol-sm-12.col-md-8.col-lg-8
@@ -111,15 +111,24 @@ block content
           h2.page__title Новости
         .col-xs-12
 
-
+          //- .news__gallery
+          //-   .news__gallery-wrap.owl-carousel(id='news-slider')
+          //-     -for(let i = 0; i < newsSlider.length; i++)
+          //-       .news__slide
+          //-         .news__slide-wrap
+          //-           img(src=`${newsSlider[i].img}`, alt='')
+          //-           a.news__slide-link(href=`${newsSlider[i].link}`)
+          //-             p.news__slide-caption= newsSlider[i].title
           .news__gallery
-            .news__gallery-wrap.owl-carousel(id='news-slider')
-              -for(let i = 0; i < newsSlider.length; i++)
-                .news__slide
-                  .news__slide-wrap
-                    img(src=`${newsSlider[i].img}`, alt='')
-                    a.news__slide-link(href=`${newsSlider[i].link}`)
-                      p.news__slide-caption= newsSlider[i].title
+            .glide(id='news-slider')
+              .glide__track(data-glide-el="track")
+                ul.glide__slides
+                  -for(let i = 0; i < newsSlider.length; i++)
+                    li.news__slide.glide__slide
+                      .news__slide-wrap
+                        img(src=`${newsSlider[i].img}`, alt='')
+                        a.news__slide-link(href=`${newsSlider[i].link}`)
+                          p.news__slide-caption= newsSlider[i].title
 
 
   section.contacts.row(id='Contacts')

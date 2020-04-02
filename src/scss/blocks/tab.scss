@@ -102,11 +102,11 @@
       text-transform: uppercase;
 
       @media(min-width: $screen-md) {
-        @include ff-OpenSansCondenced(600, 94px, 128px);
+        @include ff-OpenSansCondenced(600, 85px, 128px);
       }
 
       @media(min-width: $screen-lg) {
-        @include ff-OpenSansCondenced(600, 125px, 170px);
+        @include ff-OpenSansCondenced(600, 120px, 170px);
       }
     }
     &-descr {
@@ -115,7 +115,7 @@
       text-transform: uppercase;
 
       @media(min-width: $screen-md) {
-        @include ff-OpenSansCondenced(600, 22px, 28px);
+        @include ff-OpenSansCondenced(600, 20px, 28px);
       }
 
       @media(min-width: $screen-lg) {
