@@ -59,6 +59,8 @@ ready(function(){
 
   console.log('DOM ready');
 
+  hidePreloader();
+
   // константы разрешений
   const screen_xs = 480;
   const screen_sm = 768;
@@ -118,7 +120,15 @@ ready(function(){
       let tabId = 'tab-' + item.id.match(/(?<=label-)(.+)/gim);
       let selectedTab = document.querySelector('#'+tabId);
       if (!selectedTab.classList.contains(activeTabClass)) {
-        tabPanels.forEach(item => closeTab(item, activeTabClass));
+        tabPanels.forEach(item => {
+          closeTab(item, activeTabClass)
+        });
+        // contentPanel.forEach(item => {
+        //   closeTab(item, activePanelClass);
+        // });
+        // panelTrigger.forEach(item => {
+        //   showTab(item, activeTrigClass);
+        // });
         showTab(selectedTab, activeTabClass);
         tabLabels.forEach(item => {
           item.classList.remove('projects__tab-label--active');
