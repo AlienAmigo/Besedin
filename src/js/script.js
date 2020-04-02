@@ -115,6 +115,18 @@ ready(function(){
     tab.classList.add(cl);
   }
 
+  function showAllTabs(arr, cl) {
+    arr.forEach(item => {
+      showTab(item, cl);
+    });
+  }
+
+  function closeAllTabs(arr, cl) {
+    arr.forEach(item => {
+      closeTab(item, cl);
+    });
+  }
+
   tabLabels.forEach(item => {
     item.addEventListener('click', ev => {
       let tabId = 'tab-' + item.id.match(/(?<=label-)(.+)/gim);

@@ -91,7 +91,7 @@ function copyJsVendors() {
       dir.src + 'assets/jquery-3.4.1.min.js',
       dir.src + 'assets/glide.min.js',
       dir.src + 'assets/slick.min.js',
-      dir.src + 'assets/owl.carousel.min.js',
+      // dir.src + 'assets/owl.carousel.min.js',
       // 'js/'
     ])
     .pipe(concat('vendors.min.js'))
