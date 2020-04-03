@@ -234,6 +234,7 @@ ready(function(){
   function load() {
     console.log('Content loaded');
 
+    // PLAY/PAUSE ВСТРОЕННЫХ ВИДЕО =============================
     const myVids = document.querySelectorAll('.video');
     window.addEventListener('scroll', () =>  {
       myVids.forEach(vid => {
@@ -251,10 +252,34 @@ ready(function(){
           bottom: window.pageYOffset + document.documentElement.clientHeight
         };
 
+        // обходим ошибку в Google Chrome
+
+        // Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause().
+        // or
+        // Uncaught (in promise) DOMException: The play() request was interrupted by a new load request
+        // https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
+        function playVideo(item) {
+          let playPromise = item.play();
+
+          if (playPromise !== undefined) {
+            playPromise.then(_ => {
+              // Automatic playback started!
+              // Show playing UI.
+            })
+            .catch(error => {
+              // Auto-play was prevented
+              // Show paused UI.
+            });
+          }
+        }
+
+        playVideo(vid);
+
+
         if (targetPosition.top > windowPosition.top &&
           targetPosition.bottom < windowPosition.bottom) {
           // Если элемент полностью видно, то запускаем следующий код
-          vid.play();
+          playVideo(vid);
         } else {
           // Если элемент не видно, то запускаем этот код
           vid.pause();

@@ -25,12 +25,28 @@
   }
 
   &--const {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 17px;
     padding: 4px 10px 7px 10px;
+
+    @media(min-width: $screen-xs) {
+      display: inline-flex;
+      font-size: 25px;
+    }
+
+    @media(min-width: $screen-sm) {
+      font-size: 25px;
+    }
 
     @media(min-width: $screen-md) {
       font-size: 25px;
+    }
+
+    @media(min-width: $screen-lg) {
+      font-size: 30px;
     }
   }
 
