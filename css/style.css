@@ -3735,12 +3735,29 @@ body {
     border-color: #c4c4c4;
     color: #c4c4c4; }
   .button--const {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 17px;
     padding: 4px 10px 7px 10px; }
+    @media (min-width: 480px) {
+      .button--const {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        font-size: 25px; } }
+    @media (min-width: 768px) {
+      .button--const {
+        font-size: 25px; } }
     @media (min-width: 992px) {
       .button--const {
         font-size: 25px; } }
+    @media (min-width: 1280px) {
+      .button--const {
+        font-size: 30px; } }
   .button-collapse-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
