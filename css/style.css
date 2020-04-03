@@ -3517,7 +3517,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  z-index: 1000;
+  z-index: 9999;
   left: 0;
   top: 0;
   height: 100vh;
@@ -3890,6 +3890,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
+  z-index: 9995;
   top: 0;
   left: 0;
   width: 100%;
@@ -4738,7 +4739,7 @@ body {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  z-index: 9999;
+  z-index: 9990;
   text-align: center;
   line-height: 30px;
   color: #fbfbfb;
