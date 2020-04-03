@@ -1,6 +1,7 @@
-.page__video-wrap
-  //- img(src='img/tab_mayak.png')
-  iframe(width="560", height="315", src="https://www.youtube-nocookie.com/embed/WbJjkd4HXLg?controls=0", frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope", allowfullscreen)
+.row
+ .col-xs-12
+    .page__video-wrap.page__video-wrap--yt
+      iframe(width="560", height="315", src="https://www.youtube-nocookie.com/embed/WbJjkd4HXLg?controls=0", frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope", allowfullscreen)
 
 .tab__film-info
   .row
@@ -59,7 +60,7 @@
     .page__video-wrap.page__video-wrap--chrom
         video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
           source(src='video/chrom.webm', type='video/webm')
-          
+
   .col-xs-12
     .page__video-wrap.page__video-wrap--08
         video(class='video', autoplay='1', loop='1', width='640', preload='none', control)

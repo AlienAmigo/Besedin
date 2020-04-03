@@ -162,7 +162,6 @@ ready(function(){
 
       let targetCoordinates = targetElem.getBoundingClientRect().top;
 
-      console.log(targetCoordinates);
 
       window.scrollBy({
         top: targetCoordinates - 90,
