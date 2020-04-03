@@ -28,6 +28,10 @@
     margin-bottom: 50px;
     font-size: 30px;
     padding: 4px 10px 7px 10px;
+
+    @media(min-width: $screen-md) {
+      font-size: 25px;
+    }
   }
 
   &-collapse-wrap {

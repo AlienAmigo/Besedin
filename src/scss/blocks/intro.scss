@@ -23,12 +23,10 @@
       }
 
     @media(min-width: $screen-md) {
-      // height: 670px;
       margin-bottom: 160px;
     }
 
     @media(min-width: $screen-lg) {
-      // height: 900px;
       margin-bottom: 220px;
     }
   }
@@ -86,6 +84,10 @@
   &__subtitle {
     margin-top: 45px;
     margin-bottom: 45px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 125px;
+    }
   }
 
   &__img1-wrap {

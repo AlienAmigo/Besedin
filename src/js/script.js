@@ -143,6 +143,7 @@ ready(function(){
     });
   });
 
+
   // Плавная прокрутка
 
   const anchors = document.querySelectorAll('a[href*="#"]')
@@ -163,7 +164,6 @@ ready(function(){
 
       console.log(targetCoordinates);
 
-
       window.scrollBy({
         top: targetCoordinates - 90,
         left: 0,
@@ -172,33 +172,33 @@ ready(function(){
     });
   }
 
-  // Карусель Новостей
-    // $("news-slider").owlCarousel({
-    //   center:true,
-    //   loop: true,
-    //   stagePadding: 50,
-    //   responsive:{
-    //     0:{
-    //       items: 1,
-    //       stagePadding: 25,
-    //       center:true,
-    //       loop: true,
-    //     },
-    //     480:{
-    //       items: 2,
-    //       stagePadding: 15,
-    //       center:true,
-    //       loop: true,
-    //     },
-    //     768:{
-    //         items: 2
-    //     },
-    //     992:{
-    //         items: 3
-    //     }
-    //   }
-    // });
+  // Кнопка «Наверх»
+  function trackScroll() {
+    let scrolled = window.pageYOffset;
+    let coords = document.documentElement.clientHeight;
 
+    if (scrolled > coords) {
+      goTopBtn.classList.add('upbtn--show');
+    }
+    if (scrolled < coords) {
+      goTopBtn.classList.remove('upbtn--show');
+    }
+  }
+
+  function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -80, 'smooth');
+      setTimeout(backToTop, 0);
+    }
+  }
+
+  const goTopBtn = document.querySelector('#upbtn');
+
+  window.addEventListener('scroll', trackScroll);
+  goTopBtn.addEventListener('click', backToTop);
+
+
+  // Карусель Новостей
     let newsGallery = new Glide('#news-slider', {
       type: 'carousel',
       startAt: 0,
@@ -232,7 +232,7 @@ ready(function(){
   // РАБОТА С ВИДЕО
 
   function load() {
-    // hidePreloader();
+    console.log('Content loaded');
 
     const myVids = document.querySelectorAll('.video');
     window.addEventListener('scroll', () =>  {
@@ -267,7 +267,6 @@ ready(function(){
 
   // прелоадер загрузки контента
   function hidePreloader() {
-      console.log('Content loaded');
       const preloader = document.querySelector('#preloader');
       setInterval(() => {
         preloader.style= 'opacity: 0';
@@ -278,5 +277,4 @@ ready(function(){
   }
 
   window.addEventListener('load', load);
-
 });

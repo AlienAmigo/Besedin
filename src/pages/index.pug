@@ -9,7 +9,6 @@ block content
   section.intro
     .row
       .col-xs-12
-        //- .intro__head-wrap
         .page__video-wrap.page__video-wrap--main
           //- img(src='img/work_block.png')
           video(class='video', autoplay='autoplay', loop='loop', width='640', preload='auto', control)
@@ -80,7 +79,6 @@ block content
               .projects__item-wrap(id=`trig-${arrayFilms[i].id}`)
                 img(src=`${arrayFilms[i].img}`, alt='')
               .projects__item-title= arrayFilms[i].title
-            //- .projects__tab-content(id=`content-${arrayFilms[i].id}`, class=`${(i === 0) ? 'projects__tab-content--active' : ''}`)
             .projects__tab-content(id=`content-${arrayFilms[i].id}`)
               -if (i === 0)
                 include ../pug/tab-grom.pug
@@ -96,13 +94,11 @@ block content
               .projects__item-wrap(id=`trig-${arrayClips[i].id}`)
                 img(src=`${arrayClips[i].img}`, alt='')
               .projects__item-title= arrayClips[i].title
-            //- .projects__tab-content(id=`content-${arrayClips[i].id}`, class=`${(i === 0) ? 'projects__tab-content--active' : ''}`)
             .projects__tab-content(id=`content-${arrayClips[i].id}`)
               -if (i === 0)
                 include ../pug/trab-mayak.pug
               -if (i === 1)
                 include ../pug/tab-bit.pug
-
 
   section.news
     .news-wrap
@@ -111,14 +107,6 @@ block content
           h2.page__title Новости
         .col-xs-12
 
-          //- .news__gallery
-          //-   .news__gallery-wrap.owl-carousel(id='news-slider')
-          //-     -for(let i = 0; i < newsSlider.length; i++)
-          //-       .news__slide
-          //-         .news__slide-wrap
-          //-           img(src=`${newsSlider[i].img}`, alt='')
-          //-           a.news__slide-link(href=`${newsSlider[i].link}`)
-          //-             p.news__slide-caption= newsSlider[i].title
           .news__gallery
             .glide(id='news-slider')
               .glide__track(data-glide-el="track")
