@@ -3881,7 +3881,9 @@ body {
   .main-nav--mobile-active {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-animation: fadeInDown 0.5s;
+            animation: fadeInDown 0.5s; }
   @media (min-width: 768px) {
     .main-nav {
       display: -webkit-inline-box;
@@ -4024,7 +4026,7 @@ body {
       text-decoration: none; }
   .social-links--menu {
     margin-left: 30px;
-    margin-bottom: 50px; }
+    margin-bottom: 90px; }
     @media (min-width: 768px) {
       .social-links--menu {
         display: none; } }
