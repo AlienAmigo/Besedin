@@ -21,10 +21,10 @@
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "^9.0.2",
+    "autoprefixer": "^9.7.5",
     "bemlint": "^1.6.1",
     "browser-sync": "^2.14.0",
     "del": "^4.0.0",

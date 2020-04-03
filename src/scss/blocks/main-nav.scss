@@ -10,6 +10,7 @@
 
   &--mobile-active {
     display: flex;
+    animation: fadeInDown 0.5s;
   }
 
   @media (min-width: $screen-sm) {
