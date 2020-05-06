@@ -3897,7 +3897,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
-  z-index: 9995;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
@@ -4746,7 +4746,7 @@ body {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  z-index: 9990;
+  z-index: 9000;
   text-align: center;
   line-height: 30px;
   color: #fbfbfb;
@@ -4831,7 +4831,7 @@ body {
       height: 50px;
       margin: 0;
       background: transparent;
-      border-top: 4px solid #d5303a;
+      border-top: 4px solid #fbfbfb;
       border-right: 4px solid transparent;
       border-radius: 50%;
       -webkit-animation: 1s spin linear infinite;
