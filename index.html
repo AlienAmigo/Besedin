@@ -61,8 +61,10 @@
       <section class="intro">
         <div class="row">
           <div class="col-xs-12">
-            <div class="page__video-wrap page__video-wrap--main"><video class="video" autoplay="autoplay" loop="loop" width="640" preload="auto" control>
-                <source src="video/main.webm" type="video/webm"></video></div>
+            <div class="video__wrap"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                <source src="video/main.webm" type="video/webm" /></video>
+              <div class="video__cover"><img src="img/vid_main.webp" alt="" /></div>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -82,8 +84,10 @@
             <p class="page__text">Реализует сложные технические решения для создания действительно эффектных экшн-сцен. На&nbsp;съёмках «Майора Грома», придумал технику «360 градусов».</p>
           </div>
           <div class="col-xs-12">
-            <div class="page__video-wrap page__video-wrap--01"><video class="video" autoplay="autoplay" loop="loop" width="640" preload="none" control>
-                <source src="video/01.webm" type="video/webm"></video></div>
+            <div class="video__wrap video__wrap--01"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                <source src="video/01.webm" type="video/webm" /></video>
+              <div class="video__cover"><img src="img/vid_01.webp" alt="" /></div>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -99,8 +103,10 @@
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <div class="page__video-wrap"><video class="video" autoplay="autoplay" loop="loop" width="640" preload="none" control>
-                <source src="video/02.webm" type="video/webm"></video></div>
+            <div class="video__wrap video__wrap--02"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                <source src="video/02.webm" type="video/webm" /></video>
+              <div class="video__cover"><img src="img/vid_02.webp" alt="" /></div>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -138,7 +144,13 @@
               <div class="projects__tab-content" id="content-film-grom">
                 <div class="row">
                   <div class="col-xs-12">
-                    <div class="page__video-wrap page__video-wrap--yt"><iframe src="https://www.youtube.com/embed/N5kvQa7EJ68?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe></div>
+                    <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/N5kvQa7EJ68/">
+                        <picture>
+                          <source srcset="https://i.ytimg.com/vi_webp/N5kvQa7EJ68/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/N5kvQa7EJ68/maxresdefault.jpg" alt="" /></picture>
+                      </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                          <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                          <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                        </svg></button></div>
                   </div>
                 </div>
                 <div class="tab__film-info">
@@ -212,12 +224,16 @@
                       <div class="page__ill-caption">Владимир Беседин и инженеры проекта «Майор Гром» в процессе разработки механизма «360 градусов»</div>
                     </div>
                     <div class="col-xs-12">
-                      <div class="page__video-wrap page__video-wrap--03"><video class="video" autoplay="1" loop="1" width="640" preload="none" control>
-                          <source src="video/03.webm" type="video/webm"></video></div>
+                      <div class="video__wrap video__wrap--03"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                          <source src="video/03.webm" type="video/webm" /></video>
+                        <div class="video__cover"><img src="img/vid_03.webp" alt="" /></div>
+                      </div>
                     </div>
                     <div class="col-xs-12">
-                      <div class="page__video-wrap page__video-wrap--04"><video class="video" autoplay="1" loop="1" width="640" preload="none" control>
-                          <source src="video/04.webm" type="video/webm"></video></div>
+                      <div class="video__wrap video__wrap--04"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                          <source src="video/04.webm" type="video/webm" /></video>
+                        <div class="video__cover"><img src="img/vid_04.webp" alt="" /></div>
+                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -269,7 +285,13 @@
                 <div class="projects__tab-content" id="content-film-doc">
                   <div class="row">
                     <div class="col-xs-12">
-                      <div class="page__video-wrap page__video-wrap--yt"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZQUxpQHY4eQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe></div>
+                      <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/ZQUxpQHY4eQ/">
+                          <picture>
+                            <source srcset="https://i.ytimg.com/vi_webp/ZQUxpQHY4eQ/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/ZQUxpQHY4eQ/maxresdefault.jpg" alt="" /></picture>
+                        </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                            <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                            <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                          </svg></button></div>
                     </div>
                   </div>
                   <div class="tab__film-info">
@@ -298,8 +320,10 @@
                     </div>
                     <div class="row">
                       <div class="col-xs-12">
-                        <div class="page__video-wrap page__video-wrap--05"><video class="video" autoplay="1" loop="1" width="640" preload="none" control>
-                            <source src="video/05.webm" type="video/webm"></video></div>
+                        <div class="video__wrap video__wrap--05"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                            <source src="video/05.webm" type="video/webm" /></video>
+                          <div class="video__cover"><img src="img/vid_05.webp" alt="" /></div>
+                        </div>
                       </div>
                     </div>
                     <div class="button-collapse-wrap col-xs-12">
@@ -320,7 +344,13 @@
                 <div class="projects__tab-content" id="content-clip-mayak">
                   <div class="row">
                     <div class="col-xs-12">
-                      <div class="page__video-wrap page__video-wrap--yt"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WbJjkd4HXLg?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe></div>
+                      <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/WbJjkd4HXLg/">
+                          <picture>
+                            <source srcset="https://i.ytimg.com/vi_webp/WbJjkd4HXLg/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/WbJjkd4HXLg/maxresdefault.jpg" alt="" /></picture>
+                        </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                            <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                            <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                          </svg></button></div>
                     </div>
                   </div>
                   <div class="tab__film-info">
@@ -352,8 +382,10 @@
                     </div>
                     <div class="row">
                       <div class="col-xs-12">
-                        <div class="page__video-wrap page__video-wrap--06"><video class="video" autoplay="1" loop="1" width="640" preload="none" control>
-                            <source src="video/06.webm" type="video/webm"></video></div>
+                        <div class="video__wrap video__wrap--06"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                            <source src="video/06.webm" type="video/webm" /></video>
+                          <div class="video__cover"><img src="img/vid_06.webp" alt="" /></div>
+                        </div>
                       </div>
                     </div>
                     <div class="row">
@@ -364,8 +396,10 @@
                         <div class="page__ill-wrap"><img src="img/mayak06.png" alt=""></div>
                       </div>
                       <div class="col-xs-12">
-                        <div class="page__video-wrap page__video-wrap--07"><video class="video" autoplay="1" loop="1" width="640" preload="none" control>
-                            <source src="video/07.webm" type="video/webm"></video></div>
+                        <div class="video__wrap video__wrap--07"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                            <source src="video/07.webm" type="video/webm" /></video>
+                          <div class="video__cover"><img src="img/vid_07.webp" alt="" /></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -374,12 +408,16 @@
                       <p class="page__text">Чтобы создать атмосферу апокалипсиса в&nbsp;кадре, в&nbsp;павильоне «Ленфильма» построили декорации экологической катастрофы. В&nbsp;течение нескольких дней съёмочная команда собирала более 80&nbsp;тысяч килограмм мусора, который после съёмок был отсортирован и&nbsp;сдан на переработку.</p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-8">
-                      <div class="page__video-wrap page__video-wrap--chrom"><video class="video" autoplay="1" loop="1" width="640" preload="none" control>
-                          <source src="video/chrom.webm" type="video/webm"></video></div>
+                      <div class="video__wrap video__wrap--chrom"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                          <source src="video/chrom.webm" type="video/webm" /></video>
+                        <div class="video__cover"><img src="img/vid_chrom.webp" alt="" /></div>
+                      </div>
                     </div>
                     <div class="col-xs-12">
-                      <div class="page__video-wrap page__video-wrap--08"><video class="video" autoplay="1" loop="1" width="640" preload="none" control>
-                          <source src="video/08.webm" type="video/webm"></video></div>
+                      <div class="video__wrap video__wrap--08"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                          <source src="video/08.webm" type="video/webm" /></video>
+                        <div class="video__cover"><img src="img/vid_08.webp" alt="" /></div>
+                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -405,7 +443,13 @@
                 <div class="projects__tab-content" id="content-clip-bit">
                   <div class="row">
                     <div class="col-xs-12">
-                      <div class="page__video-wrap page__video-wrap--yt"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/d9eSfSACgmI?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe></div>
+                      <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/d9eSfSACgmI/">
+                          <picture>
+                            <source srcset="https://i.ytimg.com/vi_webp/d9eSfSACgmI/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/d9eSfSACgmI/maxresdefault.jpg" alt="" /></picture>
+                        </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                            <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                            <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                          </svg></button></div>
                     </div>
                   </div>
                   <div class="row">
