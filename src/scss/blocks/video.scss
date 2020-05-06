@@ -1,62 +1,110 @@
-
 .video {
-  position: relative;
   width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  background-color: #000;
+
+  &__hidden {
+    visibility: hidden;
+  }
+
+  &__wrap {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 80px;
+    padding-bottom: 40%;
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+
+    &--main {
+      padding-bottom: 40%;
+    }
+
+    &--01 {
+      padding-bottom: 37.5%;
+    }
+
+    &--02 {
+      padding-bottom: 40.625%;
+    }
+
+    &--03 {
+      padding-bottom: 55%;
+    }
+
+    &--04 {
+      padding-bottom: 36.875%;
+    }
+
+    &--05 {
+      padding-bottom: 40.625%;
+    }
+
+    &--06 {
+      padding-bottom: 41.25%;
+    }
+
+    &--07 {
+      padding-bottom: 41.25%;
+    }
+
+    &--08 {
+      padding-bottom: 40.625%;
+    }
+
+    &--chrom {
+      padding-bottom: 55%;
+    }
+  }
+
+  & iframe,
+  & object,
+  & embed,
+  & video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  &__cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 40;
+      top: calc(50% - 25px);
+      left: calc(50% - 25px);
+      width: 50px;
+      height: 50px;
+      margin: 0;
+      background: transparent;
+      border-top: 4px solid #d5303a;
+      border-right: 4px solid transparent;
+      border-radius: 50%;
+      animation: 1s spin linear infinite;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
-.video__embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.video__media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.video__button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 68px;
-  height: 48px;
-  border: none;
-  background-color: transparent;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  display: none;
-}
-
-.video__button-shape {
-  fill: #212121;
-  fill-opacity: 0.8;
-}
-
-.video__button {
-  outline: none;
-}
-
-.video:hover .video__button-shape,
-.video-button:focus .video__button-shape  {
-  fill: #f00;
-  fill-opacity: 1;
-}
-
-.video__button-icon {
-  fill: #fff;
-}
-
-.video--enabled .video__button {
-  display: block;
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

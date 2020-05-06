@@ -1,7 +1,6 @@
 .row
- .col-xs-12
-    .page__video-wrap.page__video-wrap--yt
-      +ytvideo('N5kvQa7EJ68')
+  .col-xs-12
+    +ytvideo('N5kvQa7EJ68')
 
 .tab__film-info
   .row
@@ -66,13 +65,10 @@
     .page__ill-caption Владимир Беседин и инженеры проекта «Майор Гром» в процессе разработки механизма «360 градусов»
 
   .col-xs-12
-    .page__video-wrap.page__video-wrap--03
-        video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
-          source(src='video/03.webm', type='video/webm')
+    +autoplay-video('03.webm', 'vid_03.webp','video__wrap--03')
+
   .col-xs-12
-    .page__video-wrap.page__video-wrap--04
-        video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
-          source(src='video/04.webm', type='video/webm')
+    +autoplay-video('04.webm', 'vid_04.webp','video__wrap--04')
 
 .row
   .col-xs-12.col-sm-12.col-md-8

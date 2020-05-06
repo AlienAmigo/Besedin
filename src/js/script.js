@@ -81,7 +81,7 @@ ready(function(){
 
   tabLabels.forEach(item => {
     item.addEventListener('click', ev => {
-      let tabId = 'tab-' + item.id.match(/(?<=label-)(.+)/gim);
+      let tabId = 'tab-' + item.id.replace(/(^label-)(.+)/gim, '$2');
       let selectedTab = document.querySelector('#'+tabId);
       if (!selectedTab.classList.contains(activeTabClass)) {
         tabPanels.forEach(item => {
@@ -145,7 +145,7 @@ ready(function(){
 
   // Ленивая загрузка видео с YouTube
   function findVideos() {
-    let videos = document.querySelectorAll('.page__video-wrap--yt');
+    let videos = document.querySelectorAll('.yt-video');
 
     for (let i = 0; i < videos.length; i++) {
       setupVideo(videos[i]);
@@ -153,9 +153,9 @@ ready(function(){
   }
 
   function setupVideo(video) {
-    let link = video.querySelector('.video__link');
-    let media = video.querySelector('.video__media');
-    let button = video.querySelector('.video__button');
+    let link = video.querySelector('.yt-video__link');
+    let media = video.querySelector('.yt-video__media');
+    let button = video.querySelector('.yt-video__button');
     let id = parseMediaURL(media);
 
     video.addEventListener('click', () => {
@@ -167,7 +167,7 @@ ready(function(){
     });
 
     link.removeAttribute('href');
-    video.classList.add('video--enabled');
+    video.classList.add('yt-video--enabled');
   }
 
   function parseMediaURL(media) {
@@ -184,7 +184,7 @@ ready(function(){
     iframe.setAttribute('allowfullscreen', '');
     iframe.setAttribute('allow', 'autoplay');
     iframe.setAttribute('src', generateURL(id));
-    iframe.classList.add('video__media');
+    iframe.classList.add('yt-video__media');
 
     return iframe;
   }
@@ -215,7 +215,6 @@ ready(function(){
       });
 
       let targetCoordinates = targetElem.getBoundingClientRect().top;
-
 
       window.scrollBy({
         top: targetCoordinates - 90,
@@ -284,63 +283,76 @@ ready(function(){
 
   // РАБОТА С ВИДЕО
 
+  // обходим ошибку в Google Chrome
+
+  // Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause().
+  // or
+  // Uncaught (in promise) DOMException: The play() request was interrupted by a new load request
+  // https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
+  function playVideo(item) {
+    let playPromise = item.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Automatic playback started!
+        // Show playing UI.
+      })
+      .catch(error => {
+        // Auto-play was prevented
+        // Show paused UI.
+      });
+    }
+  }
+
+  const myVids = document.querySelectorAll('.video');
+
+  myVids.forEach(vid => {
+    playVideo(vid);
+    const imgCover = vid.parentElement.querySelector('.video__cover');
+    vid.addEventListener('canplaythrough', ev => {
+      if (imgCover) {
+        imgCover.remove();
+      }
+      vid.classList.remove('video__hidden');
+      playVideo(vid);
+    });
+  });
+
+  // PLAY/PAUSE ВСТРОЕННЫХ ВИДЕО =============================
+
+
+  window.addEventListener('scroll', () =>  {
+    myVids.forEach(vid => {
+      let targetPosition = {
+        top: window.pageYOffset + vid.getBoundingClientRect().top,
+        left: window.pageXOffset + vid.getBoundingClientRect().left,
+        right: window.pageXOffset + vid.getBoundingClientRect().right,
+        bottom: window.pageYOffset + vid.getBoundingClientRect().bottom
+      },
+      // Получаем позиции окна
+      windowPosition = {
+        top: window.pageYOffset,
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+      };
+
+
+      if (targetPosition.top > windowPosition.top &&
+        targetPosition.bottom < windowPosition.bottom) {
+        // Если элемент полностью видно, то запускаем следующий код
+        playVideo(vid);
+      } else {
+        // Если элемент не видно, то запускаем этот код
+        vid.pause();
+      };
+    });
+  });
+
   function load() {
     console.log('Content loaded');
 
-    // PLAY/PAUSE ВСТРОЕННЫХ ВИДЕО =============================
-    const myVids = document.querySelectorAll('.video');
-    window.addEventListener('scroll', () =>  {
-      myVids.forEach(vid => {
-        let targetPosition = {
-          top: window.pageYOffset + vid.getBoundingClientRect().top,
-          left: window.pageXOffset + vid.getBoundingClientRect().left,
-          right: window.pageXOffset + vid.getBoundingClientRect().right,
-          bottom: window.pageYOffset + vid.getBoundingClientRect().bottom
-        },
-        // Получаем позиции окна
-        windowPosition = {
-          top: window.pageYOffset,
-          left: window.pageXOffset,
-          right: window.pageXOffset + document.documentElement.clientWidth,
-          bottom: window.pageYOffset + document.documentElement.clientHeight
-        };
-
-        // обходим ошибку в Google Chrome
-
-        // Uncaught (in promise) DOMException: The play() request was interrupted by a call to pause().
-        // or
-        // Uncaught (in promise) DOMException: The play() request was interrupted by a new load request
-        // https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
-        function playVideo(item) {
-          let playPromise = item.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then(_ => {
-              // Automatic playback started!
-              // Show playing UI.
-            })
-            .catch(error => {
-              // Auto-play was prevented
-              // Show paused UI.
-            });
-          }
-        }
-
-        playVideo(vid);
-
-
-        if (targetPosition.top > windowPosition.top &&
-          targetPosition.bottom < windowPosition.bottom) {
-          // Если элемент полностью видно, то запускаем следующий код
-          playVideo(vid);
-        } else {
-          // Если элемент не видно, то запускаем этот код
-          vid.pause();
-        };
-      });
-    });
-
-  };
+    };
 
 
   // прелоадер загрузки контента

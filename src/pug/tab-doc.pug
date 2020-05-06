@@ -1,7 +1,6 @@
 .row
- .col-xs-12
-    .page__video-wrap.page__video-wrap--yt
-      +ytvideo('ZQUxpQHY4eQ')
+  .col-xs-12
+    +ytvideo('ZQUxpQHY4eQ')
 
 .tab__film-info
   .row
@@ -24,12 +23,10 @@
       p.tab__credit-pers Юрий Тарханов
 
     .col-sm-12.col-xs-12.col-md-8
-      p.page__text После зрительского успеха техники  «360 градусов» в  «Майое Громе» был придуман и воплощен приём съемки, где камера пролетает сквозь автомобили.
+      p.page__text После зрительского успеха техники  «360 градусов» в «Майое Громе» был придуман и воплощен приём съемки, где камера пролетает сквозь автомобили.
   .row
     .col-xs-12
-      .page__video-wrap.page__video-wrap--05
-        video(class='video', autoplay='1', loop='1', width='640', preload='none', control)
-          source(src='video/05.webm', type='video/webm')
+      +autoplay-video('05.webm', 'vid_05.webp','video__wrap--05')
 
   .button-collapse-wrap.col-xs-12
     .button-collapse Свернуть

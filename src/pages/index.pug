@@ -9,10 +9,7 @@ block content
   section.intro
     .row
       .col-xs-12
-        .page__video-wrap.page__video-wrap--main
-          //- img(src='img/work_block.png')
-          video(class='video', autoplay='autoplay', loop='loop', width='640', preload='auto', control)
-            source(src='video/main.webm', type='video/webm')
+        +autoplay-video('main.webm', 'vid_main.webp')
 
     .row
       .col-xs-12.col-sm-12.order-xxs-2.order-xs-2.order-sm-2.col-md-8
@@ -30,11 +27,8 @@ block content
         h3.page__title.intro__subtitle Подход к&nbsp;съёмке
         p.page__text Реализует сложные технические решения для создания действительно эффектных экшн-сцен. На&nbsp;съёмках «Майора Грома», придумал технику «360 градусов».
       .col-xs-12
-        .page__video-wrap.page__video-wrap--01
-          video(class='video', autoplay='autoplay', loop='loop', width='640', preload='none', control)
-            source(src='video/01.webm', type='video/webm')
-        //- .intro__wrap-360
-        //-   img(src='img/work_block2.png', alt='')
+        +autoplay-video('01.webm', 'vid_01.webp','video__wrap--01')
+
     .row
       .col-xs-12.col-sm-12.order-xxs-2.order-xs-2.order-sm-2.col-md-8.col-lg-8
         .intro__img2-wrap
@@ -45,11 +39,8 @@ block content
         p.page__text Один из немногих российских режиссёров, который работает с&nbsp;раскадровками и&nbsp;сам разрабатывает цветокорекцию.
     .row
       .col-xs-12
-        //-   .intro__wrap-color
-        //-     img(src='img/work_block3.png', alt='')
-        .page__video-wrap
-          video(class='video', autoplay='autoplay', loop='loop', width='640', preload='none', control)
-            source(src='video/02.webm', type='video/webm')
+        +autoplay-video('02.webm', 'vid_02.webp','video__wrap--02')
+
     .row
       .col-xs-12.xol-sm-12.col-md-8.col-lg-8
         .intro__img3-wrap
