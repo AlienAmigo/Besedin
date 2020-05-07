@@ -2722,6 +2722,9 @@ body {
           justify-content: flex-start;
   margin-left: 20px;
   margin-right: 20px; }
+  .row .row {
+    margin-left: calc(10px * -1);
+    margin-right: calc(10px * -1); }
 
 [class*='col-'] {
   width: 100%;
@@ -2817,6 +2820,9 @@ body {
   .row {
     margin-left: 20px;
     margin-right: 20px; }
+    .row .row {
+      margin-left: calc(10px * -1);
+      margin-right: calc(10px * -1); }
   .col-xs-12 {
     width: calc(100% * (12 / 12)); }
   .col-xs-11 {
@@ -2930,6 +2936,9 @@ body {
   .row {
     margin-left: 20px;
     margin-right: 20px; }
+    .row .row {
+      margin-left: calc(10px * -1);
+      margin-right: calc(10px * -1); }
   .col-sm-12 {
     width: calc(100% * (12 / 12)); }
   .col-sm-11 {
@@ -3043,6 +3052,9 @@ body {
   .row {
     margin-left: 60px;
     margin-right: 60px; }
+    .row .row {
+      margin-left: calc(10px * -1);
+      margin-right: calc(10px * -1); }
   .col-md-12 {
     width: calc(100% * (12 / 12)); }
   .col-md-11 {
@@ -3156,6 +3168,9 @@ body {
   .row {
     margin-left: 60px;
     margin-right: 60px; }
+    .row .row {
+      margin-left: calc(10px * -1);
+      margin-right: calc(10px * -1); }
   .hidden-lg {
     display: none; }
   .col-lg-12 {
@@ -3299,6 +3314,12 @@ body {
   .col-left-lg-0 {
     -ms-flex-item-align: start;
         align-self: flex-start; } }
+
+.row.no-gutter {
+  margin: 0; }
+  .row.no-gutter [class*='col-'] {
+    margin: 0;
+    padding: 0; }
 
 .sprite-instagram-icon {
   background-image: url(../img/spritesheet.png);
@@ -3743,7 +3764,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 70%;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
@@ -3754,14 +3775,17 @@ body {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
-        width: auto;
+        width: 100%;
         font-size: 25px; } }
     @media (min-width: 768px) {
       .button--const {
         font-size: 25px; } }
     @media (min-width: 992px) {
       .button--const {
-        font-size: 25px; } }
+        width: auto;
+        font-size: 25px;
+        margin-left: 20px;
+        margin-right: 20px; } }
     @media (min-width: 1280px) {
       .button--const {
         font-size: 30px; } }
