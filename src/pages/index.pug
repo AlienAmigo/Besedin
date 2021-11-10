@@ -57,13 +57,13 @@ block content
       .col-xs-12
           h2.projects__title Проекты
 
-      -for(let i = 0; i < arrayTabs.length; i++)
+      - for(let i = 0; i < arrayTabs.length; i++)
         .col-xs-3.col-sm-2.col-md-2.col-lg-2
           h3.projects__tab-label(id=`${arrayTabs[i].id}`, class=`${(i == 0) ? 'projects__tab-label--active' : ''}`)= arrayTabs[i].title
 
     //- FILMS
     .projects__tab-wrap.projects__tab-wrap--active(id='tab-films')
-      -for(let i = 0; i < arrayFilms.length; i++)
+      - for(let i = 0; i < arrayFilms.length; i++)
         .row
           .col-xs-12
             .projects__item.projects__item--active(id=`${arrayFilms[i].id}`)
@@ -71,14 +71,14 @@ block content
                 img(src=`${arrayFilms[i].img}`, alt='')
               .projects__item-title= arrayFilms[i].title
             .projects__tab-content(id=`content-${arrayFilms[i].id}`)
-              -if (i === 0)
+              - if (i === 0)
                 include ../pug/tab-grom.pug
-              -if (i === 1)
+              - if (i === 1)
                 include ../pug/tab-doc.pug
 
     //- CLIPS
     .projects__tab-wrap(id='tab-clips')
-      -for(let i = 0; i < arrayClips.length; i++)
+      - for(let i = 0; i < arrayClips.length; i++)
         .row
           .col-xs-12
             .projects__item.projects__item--active(id=`${arrayClips[i].id}`)
@@ -86,9 +86,9 @@ block content
                 img(src=`${arrayClips[i].img}`, alt='')
               .projects__item-title= arrayClips[i].title
             .projects__tab-content(id=`content-${arrayClips[i].id}`)
-              -if (i === 0)
+              - if (i === 0)
                 include ../pug/trab-mayak.pug
-              -if (i === 1)
+              - if (i === 1)
                 include ../pug/tab-bit.pug
 
   section.news
@@ -102,7 +102,7 @@ block content
             .glide(id='news-slider')
               .glide__track(data-glide-el="track")
                 ul.glide__slides
-                  -for(let i = 0; i < newsSlider.length; i++)
+                  - for(let i = 0; i < newsSlider.length; i++)
                     li.news__slide.glide__slide
                       .news__slide-wrap
                         img(src=`${newsSlider[i].img}`, alt='')

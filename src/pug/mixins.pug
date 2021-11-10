@@ -1,8 +1,8 @@
 //- Примеси
 mixin social-links(data, attr)
   .social-links(class=attr)
-    -for(let i = 0; i < data.length; i++)
-      a(href=`${data[i].url}`, target='_blank').social-links__item
+    - for(let i = 0; i < data.length; i++)
+      a.social-links__item(href=`${data[i].url}`, target='_blank')
         span(class=`${data[i].class}`)
 
 mixin ytvideo(id)
@@ -19,4 +19,4 @@ mixin autoplay-video(vid, cover, cl)
     video.video.video__hidden(loop='loop', width='850', autoplay='autoplay', control)
       source(src=`video/${vid}`, type='video/webm')
     .video__cover
-      img(src=`img/${cover}` alt='')
+      img(src=`img/${cover}`, alt='')

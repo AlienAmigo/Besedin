@@ -1,14 +1,6 @@
 .intro {
   margin-top: 70px;
 
-  @media (min-width: $screen-md) {
-    margin-top: 100px;
-  }
-
-  @media (min-width: $screen-lg) {
-    margin-top: 100px;
-  }
-
   &__head-wrap {
     position: relative;
     z-index: 1;
@@ -16,18 +8,10 @@
     margin-bottom: 100px;
     overflow: hidden;
 
-     img {
-       height: 100%;
-       width: auto;
-       left: 50%;
-      }
-
-    @media(min-width: $screen-md) {
-      margin-bottom: 160px;
-    }
-
-    @media(min-width: $screen-lg) {
-      margin-bottom: 220px;
+    img {
+      height: 100%;
+      width: auto;
+      left: 50%;
     }
   }
 
@@ -36,24 +20,7 @@
     margin-bottom: 50px;
     width: 100%;
     overflow: hidden;
-    @include img-wrap(100%, 'auto');
-
-    @media(min-width: $screen-md) {
-      left: 0;
-      height: 490px;
-      max-width: 100%;
-      width: 809px;
-      margin-top: 30px;
-      margin-bottom: 60px;
-    }
-
-    @media(min-width: $screen-lg) {
-      left: 0;
-      width: 1100px;
-      height: 600px;
-      margin-top: 40px;
-      margin-bottom: 100px;
-    }
+    @include img-wrap(100%, "auto");
   }
 
   &__wrap-color {
@@ -63,78 +30,114 @@
     width: 809px;
     min-height: 180px;
     overflow: hidden;
-    @include img-wrap(100%, 'auto');
+    @include img-wrap(100%, "auto");
+  }
 
-    @media(min-width: $screen-md) {
+  &__subtitle {
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+
+  &__img1-wrap {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    @include img-wrap(100%, "auto");
+  }
+
+  &__img2-wrap {
+    margin-bottom: 40px;
+    @include img-wrap(100%, "auto");
+  }
+
+  &__img3-wrap,
+  &__img4-wrap {
+    margin-bottom: 30px;
+    @include img-wrap(100%, "auto");
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .intro {
+    margin-top: 100px;
+
+    &__head-wrap {
+      margin-bottom: 160px;
+    }
+
+    &__wrap-360 {
+      left: 0;
+      height: 490px;
+      max-width: 100%;
+      width: 809px;
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+
+    &__wrap-color {
       height: 450px;
       width: 1100px;
       margin-top: 30px;
       margin-bottom: 60px;
     }
 
-    @media(min-width: $screen-lg) {
+    &__subtitle {
+      margin-top: 125px;
+    }
+
+    &__img1-wrap {
+      margin-top: 0;
+    }
+
+    &__img2-wrap {
+      margin-bottom: 80px;
+    }
+
+    &__img3-wrap {
+      margin-bottom: 80px;
+    }
+
+    &__img4-wrap {
+      margin-top: 20px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .intro {
+    margin-top: 100px;
+
+    &__head-wrap {
+      margin-bottom: 220px;
+    }
+
+    &__wrap-360 {
+      left: 0;
+      width: 1100px;
+      height: 600px;
+      margin-top: 40px;
+      margin-bottom: 100px;
+    }
+
+    &__wrap-color {
       left: 0;
       max-width: 100%;
       margin-top: 20px;
       margin-bottom: 80px;
       height: 600px;
     }
-  }
 
-  &__subtitle {
-    margin-top: 45px;
-    margin-bottom: 45px;
-
-    @media (min-width: $screen-md) {
-      margin-top: 125px;
-    }
-  }
-
-  &__img1-wrap {
-    margin-top: 30px;
-    margin-bottom: 40px;
-    @include img-wrap(100%, 'auto');
-
-    @media (min-width: $screen-md) {
-      margin-top: 0;
-    }
-  }
-
-  &__img2-wrap {
-    margin-bottom: 40px;
-    @include img-wrap(100%, 'auto');
-
-    @media (min-width: $screen-md) {
-      margin-bottom: 80px;
-    }
-
-    @media (min-width: $screen-md) {
+    &__img2-wrap {
       margin-bottom: 100px;
     }
-  }
 
-  &__img3-wrap,
-  &__img4-wrap {
-    margin-bottom: 30px;
-    @include img-wrap(100%, 'auto');
-
-    @media (min-width: $screen-md) {
-      margin-bottom: 80px;
-    }
-
-    @media (min-width: $screen-md) {
+    &__img3-wrap {
       margin-bottom: 100px;
     }
-  }
 
-  &__img4-wrap {
-
-    @media (min-width: $screen-md) {
-      margin-top: 20px;
-    }
-
-    @media (min-width: $screen-md) {
+    &__img4-wrap {
       margin-top: 30px;
+      margin-bottom: 100px;
     }
   }
 }

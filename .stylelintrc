@@ -1,5 +1,6 @@
 {
   "syntax": "scss",
+  "extends": ["stylelint-config-standard-scss"],
   "plugins": [
     "stylelint-selector-bem-pattern",
     "stylelint-order"

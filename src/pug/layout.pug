@@ -44,21 +44,21 @@ html(class='page  no-js', lang='ru')
         include data.pug
         .row
           header.header
-            a(href=`${siteRoot}`).header__link
+            a.header__link(href=`${siteRoot}`)
               h1.header__title Владимир #[span Беседин]
             .header__burger(id='menu-burger')
-              -for(let i = 0; i < 3; i++)
+              - for(let i = 0; i < 3; i++)
                 .header__burger-line(data-id=`${i}`)
             .upbtn(id='upbtn')
             nav.main-nav(id='main-nav')
               .main-nav__close-btn(id='main-nav-close-btn')
               ul.main-nav__list
-                -for(let i = 0; i < arrayNav.length; i++)
+                - for(let i = 0; i < arrayNav.length; i++)
                   li.main-nav__item
-                    a(
+                    a.main-nav__link(
                       href=`${arrayNav[i].url}`,
                       class=`${(i === 0) ? 'main-nav__link--active' : ''}`
-                      ).main-nav__link= arrayNav[i].text
+                      )= arrayNav[i].text
               +social-links(arraySocialLinks,'social-links--menu')
 
         block content

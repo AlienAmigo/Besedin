@@ -28,27 +28,6 @@
     margin-bottom: 50px;
     font-size: 25px;
     padding: 4px 10px 7px 10px;
-
-    @media (min-width: $screen-xs) {
-      display: inline-flex;
-      width: 100%;
-      font-size: 25px;
-    }
-
-    @media (min-width: $screen-sm) {
-      font-size: 25px;
-    }
-
-    @media (min-width: $screen-md) {
-      width: auto;
-      font-size: 25px;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-    @media (min-width: $screen-lg) {
-      font-size: 30px;
-    }
   }
 
   &-collapse-wrap {
@@ -63,19 +42,10 @@
     right: 0;
     margin: 25px auto;
     padding-left: 26px;
-    // font-size: 16px;
     font-size: 10px;
     font-weight: 600;
     color: $gray-medium;
     cursor: pointer;
-
-    @media (min-width: $screen-md) {
-      font-size: 14px;
-    }
-
-    @media (min-width: $screen-lg) {
-      font-size: 14px;
-    }
 
     &:before {
       @include pseudo;
@@ -83,15 +53,52 @@
       top: 2px;
       left: 0;
       transform: scale(0.75);
-
-      @media (min-width: $screen-md) {
-        top: 4px;
-        transform: scale(1);
-      }
     }
 
     &:hover {
       color: $text-color;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+  .button {
+    display: inline-flex;
+    width: 100%;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .button {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .button {
+    width: auto;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    &::before {
+      top: 4px;
+      transform: scale(1);
+    }
+
+    &-collapse {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .button {
+    font-size: 30px;
+
+    &-collapse {
+      font-size: 14px;
     }
   }
 }
