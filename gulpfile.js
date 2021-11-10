@@ -7,7 +7,7 @@ const dir =  {
 
 const { series, parallel, src, dest, watch } = require('gulp');
 const plumber = require('gulp-plumber');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');

@@ -9,8 +9,6 @@ function ready(fn) {
 
 ready(function(){
 
-  console.log('DOM ready');
-
   hidePreloader();
 
   // константы разрешений
@@ -350,7 +348,7 @@ ready(function(){
   });
 
   function load() {
-    console.log('Content loaded');
+    // console.log('Content loaded');
 
     };
 

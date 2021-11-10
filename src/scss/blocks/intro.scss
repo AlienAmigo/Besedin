@@ -93,7 +93,7 @@
   &__img1-wrap {
     margin-top: 30px;
     margin-bottom: 40px;
-    @include img-wrap(100%, 'auto')
+    @include img-wrap(100%, 'auto');
 
     @media (min-width: $screen-md) {
       margin-top: 0;
@@ -102,7 +102,7 @@
 
   &__img2-wrap {
     margin-bottom: 40px;
-    @include img-wrap(100%, 'auto')
+    @include img-wrap(100%, 'auto');
 
     @media (min-width: $screen-md) {
       margin-bottom: 80px;
@@ -116,7 +116,7 @@
   &__img3-wrap,
   &__img4-wrap {
     margin-bottom: 30px;
-    @include img-wrap(100%, 'auto')
+    @include img-wrap(100%, 'auto');
 
     @media (min-width: $screen-md) {
       margin-bottom: 80px;
