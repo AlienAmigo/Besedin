@@ -1,5 +1,4 @@
 .page {
-
   body {
     display: flex;
     flex-direction: column;
@@ -34,16 +33,6 @@
     &--warning {
       color: $warning-color;
     }
-
-    @media(min-width: $screen-md) {
-      font-size: 30px;
-      line-height: 42px;
-    }
-
-    @media(min-width: $screen-lg) {
-      font-size: 32px;
-      line-height: 42px;
-    }
   }
 
   &__subtitle {
@@ -52,71 +41,24 @@
     @include ff-OpenSansCondenced(300, 18px, 23px);
     text-transform: uppercase;
     letter-spacing: 0.4px;
-
-    @media(min-width: $screen-md) {
-      margin-top: 100px;
-      margin-bottom: 70px;
-      @include ff-OpenSansCondenced(300, 30px, 42px);
-    }
-
-    @media(min-width: $screen-lg) {
-      margin-top: 125px;
-      margin-bottom: 80px;
-    }
   }
 
   &__text {
     margin-bottom: 30px;
     @include ff-OpenSans(400, 14px, 18px);
     letter-spacing: 0.3px;
-
-    @media(min-width: $screen-md) {
-      font-size: 14px;
-      line-height: 19px;
-    }
-
-    @media(min-width: $screen-lg) {
-      font-size: 16px;
-      line-height: 25px;
-    }
-
-      &[id='About'] {
-        @media(min-width: $screen-md) {
-          padding-top: 25px;
-        }
-      }
-
-    &--padding-left {
-
-      @media(min-width: $screen-md) {
-        padding-left: 40px;
-      }
-
-      @media(min-width: $screen-lg) {
-        padding-left: 25px;
-      }
-    }
   }
 
   &__ill-wrap {
     margin-top: 30px;
     max-width: 100%;
-    @include img-wrap(100%, 'auto')
+    @include img-wrap(100%, "auto");
   }
 
   &__ill-caption {
     margin-top: 5px;
     margin-bottom: 40px;
     @include ff-OpenSans(400, 10px, 13px);
-
-    @media(min-width: $screen-md) {
-      margin-bottom: 55px;
-    }
-
-    @media(min-width: $screen-lg) {
-      margin-bottom: 40px;
-      @include ff-OpenSans(400, 12px, 18px);
-    }
   }
 
   &__video-wrap {
@@ -130,7 +72,6 @@
 
     &--main {
       padding-bottom: 40%;
-
     }
     &--01 {
       padding-bottom: 37.5%;
@@ -169,7 +110,7 @@
     }
 
     &--yt {
-      padding-bottom: 0,585%;
+      padding-bottom: 0, 585%;
     }
 
     & iframe,
@@ -187,6 +128,66 @@
     img {
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .page {
+    &__title {
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    &__subtitle {
+      margin-top: 100px;
+      margin-bottom: 70px;
+      @include ff-OpenSansCondenced(300, 30px, 42px);
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 19px;
+
+      &[id="About"] {
+        padding-top: 25px;
+      }
+
+      &--padding-left {
+        padding-left: 40px;
+      }
+
+      &__ill-caption {
+        margin-bottom: 55px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .page {
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    &__subtitle {
+      margin-top: 125px;
+      margin-bottom: 80px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 25px;
+
+      &--padding-left {
+        padding-left: 25px;
+      }
+
+      &__ill-caption {
+        margin-bottom: 40px;
+        @include ff-OpenSans(400, 12px, 18px);
+      }
     }
   }
 }

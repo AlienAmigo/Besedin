@@ -2,17 +2,7 @@
   margin-top: 75px;
   overflow: hidden;
 
-  @media(min-width: $screen-md) {
-    margin-top: 160px;
-  }
-
-  @media(min-width: $screen-lg) {
-    margin-top: 220px;
-  }
-
   &__gallery {
-    // display: flex;
-    // flex-direction: row;
     margin-top: 45px;
     margin-bottom: 100px;
     overflow: hidden;
@@ -50,17 +40,6 @@
       height: 100%;
       width: auto;
     }
-
-    @media(min-width: $screen-md) {
-      width: 280px;
-      height: 370px;
-    }
-
-    @media(min-width: $screen-lg) {
-      width: 367px;
-      height: 493px;
-      margin-right: 12px;
-    }
   }
 
   &__slide-caption {
@@ -78,15 +57,38 @@
     &:hover {
       color: $gray-medium;
     }
+  }
+}
 
-    @media(min-width: $screen-md) {
+@media screen and (min-width: $screen-md) {
+  .news {
+    margin-top: 160px;
+
+    &__slide-wrap {
+      width: 280px;
+      height: 370px;
+    }
+
+    &__slide-caption {
       max-width: 235px;
       max-height: 80px;
       font-size: 18px;
       line-height: 23px;
     }
+  }
+}
 
-    @media(min-width: $screen-lg) {
+@media screen and (min-width: $screen-lg) {
+  .news {
+    margin-top: 220px;
+
+    &__slide-wrap {
+      width: 367px;
+      height: 493px;
+      margin-right: 12px;
+    }
+
+    &__slide-caption {
       top: 403px;
       left: 20px;
       max-width: 330px;
