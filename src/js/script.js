@@ -1,3 +1,7 @@
+// TODO: выделение пунктов при прокрутке
+// TODO: сделать гл. ссылку прокруткой
+// TODO: оптимизировать / сжать изображения
+
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
     fn();
@@ -5,7 +9,6 @@ function ready(fn) {
     document.addEventListener('DOMContentLoaded', fn);
   }
 }
-
 
 ready(function(){
 
