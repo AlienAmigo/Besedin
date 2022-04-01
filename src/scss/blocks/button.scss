@@ -1,9 +1,9 @@
 .button {
   display: inline-flex;
-  border: 1px solid $text-color;
   margin: 0;
-  padding: 7px 20px 13px;
+  border: 1px solid $text-color;
   border-radius: 3px;
+  padding: 7px 20px 13px;
   color: $text-color;
   font-family: $font-family-cond;
   font-size: 32px;
@@ -47,7 +47,7 @@
     color: $gray-medium;
     cursor: pointer;
 
-    &:before {
+    &::before {
       @include pseudo;
       @extend .sprite-up;
       top: 2px;

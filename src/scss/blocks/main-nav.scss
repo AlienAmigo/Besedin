@@ -9,19 +9,14 @@
   height: 100vh;
   background-color: $gray-dark;
 
-  &--mobile-active {
-    display: flex;
-    animation: fadeInDown 0.5s;
-  }
-
   &__close-btn {
     position: relative;
     width: 25px;
     height: 25px;
     margin: 35px 42px 55px auto;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
       left: 12.5px;
@@ -30,11 +25,11 @@
       background-color: $warning-color;
     }
 
-    &:before {
+    &::before {
       transform: rotate(45deg);
     }
 
-    &:after {
+    &::after {
       transform: rotate(-45deg);
     }
   }
@@ -65,16 +60,21 @@
     }
 
     &--active {
-      &:before {
+      &::before {
         @include pseudo();
-        left: 0;
         bottom: -4px;
-        height: 2px;
+        left: 0;
         width: 100%;
+        height: 2px;
         background-color: $text-color;
         opacity: 0;
       }
     }
+  }
+
+  &--mobile-active {
+    display: flex;
+    animation: fadeInDown 0.5s;
   }
 }
 
@@ -95,8 +95,8 @@
 
     &__list {
       flex-direction: row;
-      align-items: center;
       flex-grow: 1;
+      align-items: center;
     }
 
     &__item {

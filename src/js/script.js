@@ -1,6 +1,6 @@
 // TODO: выделение пунктов при прокрутке
 // TODO: сделать гл. ссылку прокруткой
-// TODO: оптимизировать / сжать изображения
+// TODO: допроверить scss файлы stylelint
 
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){

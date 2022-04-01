@@ -1,13 +1,12 @@
 .upbtn {
   display: none;
   position: fixed;
-  bottom: 40px;
-  right: 40px;
   z-index: 9000;
+  right: 40px;
+  bottom: 40px;
   text-align: center;
   line-height: 30px;
   color: $text-color;
-
   text-shadow: 2px 2px 5px #000;
   cursor: pointer;
   animation: fadeOutRight 0.5s;
@@ -16,7 +15,7 @@
     opacity: 0.75;
   }
 
-  &:after {
+  &::after {
     content: '';
     display: inline-block;
     position: relative;
@@ -24,7 +23,7 @@
     width: 32px;
     height: 32px;
     margin-left: 5px;
-    background-image: url(../img/up.svg);
+    background-image: url('../img/up.svg');
     background-size: contain;
     background-repeat: no-repeat;
   }

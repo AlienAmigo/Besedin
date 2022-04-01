@@ -46,8 +46,8 @@
 
 @media screen and (min-width: $screen-sm) {
   .header {
-    width: $screen-sm;
     left: calc((100vw - #{$screen-sm}) / 2);
+    width: $screen-sm;
     padding-left: calc(#{$margin-sm} + #{$grid-gap} * 2);
     padding-right: calc(#{$margin-sm} + #{$grid-gap} * 2);
 
@@ -59,12 +59,9 @@
 
 @media screen and (min-width: $screen-md) {
   .header {
-    width: $screen-md;
     left: calc((100vw - #{$screen-md}) / 2);
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: calc(#{$margin-md} + #{$grid-gap});
-    padding-right: calc(#{$margin-md} + #{$grid-gap});
+    width: $screen-md;
+    padding: 25px calc(#{$margin-md} + #{$grid-gap});
 
     &__title {
       font-size: 18px;
@@ -78,8 +75,8 @@
 
 @media screen and (min-width: $screen-lg) {
   .header {
-    width: $screen-lg;
     left: calc((100vw - #{$screen-lg}) / 2);
+    width: $screen-lg;
     padding-left: calc(#{$margin-lg} + #{$grid-gap});
     padding-right: calc(#{$margin-lg} + #{$grid-gap});
   }

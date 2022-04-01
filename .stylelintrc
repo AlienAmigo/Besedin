@@ -482,7 +482,7 @@
           "always",
           {
             "message": "Перед селектором вложенным строку пустую оставь",
-            ignore: ["after-comment"],
+            ignore: ["after-comment", "first-nested"],
           },
         ],
       "media-feature-colon-space-after":

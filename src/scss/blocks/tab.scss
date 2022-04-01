@@ -85,8 +85,7 @@
 
   &__mayak-cadr {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 
     &-item {
@@ -115,8 +114,8 @@
     }
 
     &__film-title {
-      margin: 0;
       order: 1;
+      margin: 0;
       text-align: right;
       font-size: 38px;
       line-height: 38px;
@@ -132,8 +131,8 @@
     }
 
     &__film-nums {
-      align-self: stretch;
       align-items: flex-end;
+      align-self: stretch;
       height: 100%;
       margin: 0;
     }
