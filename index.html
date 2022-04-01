@@ -38,7 +38,7 @@
   <div class="page__inner">
     <div class="page__content container">
       <div class="row">
-        <header class="header"><a class="header__link" href="https://alienamigo.github.io/Besedin/">
+        <header class="header"><a class="header__link" href="https://alienamigo.github.io/Besedin/" id="header-link">
             <h1 class="header__title">Владимир <span>Беседин</span></h1>
           </a>
           <div class="header__burger" id="menu-burger">
@@ -50,7 +50,7 @@
           <nav class="main-nav" id="main-nav">
             <div class="main-nav__close-btn" id="main-nav-close-btn"></div>
             <ul class="main-nav__list">
-              <li class="main-nav__item"><a class="main-nav__link--active main-nav__link" href="#About">О режиссёре</a></li>
+              <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="#About">О режиссёре</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="#Projects">Проекты</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="#Contacts">Контакты</a></li>
             </ul>
@@ -62,7 +62,8 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="video__wrap"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                <source src="video/main.webm" type="video/webm" /></video>
+                <source src="video/main.webm" type="video/webm" />
+              </video>
               <div class="video__cover"><img src="img/vid_main.webp" alt="" /></div>
             </div>
           </div>
@@ -85,7 +86,8 @@
           </div>
           <div class="col-xs-12">
             <div class="video__wrap video__wrap--01"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                <source src="video/01.webm" type="video/webm" /></video>
+                <source src="video/01.webm" type="video/webm" />
+              </video>
               <div class="video__cover"><img src="img/vid_01.webp" alt="" /></div>
             </div>
           </div>
@@ -104,7 +106,8 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="video__wrap video__wrap--02"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                <source src="video/02.webm" type="video/webm" /></video>
+                <source src="video/02.webm" type="video/webm" />
+              </video>
               <div class="video__cover"><img src="img/vid_02.webp" alt="" /></div>
             </div>
           </div>
@@ -146,7 +149,9 @@
                   <div class="col-xs-12">
                     <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/N5kvQa7EJ68/">
                         <picture>
-                          <source srcset="https://i.ytimg.com/vi_webp/N5kvQa7EJ68/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/N5kvQa7EJ68/maxresdefault.jpg" alt="" /></picture>
+                          <source srcset="https://i.ytimg.com/vi_webp/N5kvQa7EJ68/maxresdefault.webp" type="image/webp" /><!-- TODO: добавить source c jpg-->
+                          <!-- TODO: проверить как сделано, включая фрейм и размеры (захардкодить)--><img class="yt-video__media" src="https://i.ytimg.com/vi/N5kvQa7EJ68/maxresdefault.jpg" alt="" />
+                        </picture>
                       </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
                           <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
                           <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
@@ -190,158 +195,303 @@
                         <div class="tab__film-views">
                           <div class="tab__film-views-num">6 млн</div>
                           <div class="tab__film-views-descr">просмотров в интернете<br> за первый месяц</div>
-                          </div>
-                          <div class="tab__film-rating">
-                            <div class="tab__film-rating-num">6,9</div>
-                            <div class="tab__film-rating-descr"><span>рейтинг</span>imdb</div>
-                          </div>
+                        </div>
+                        <div class="tab__film-rating">
+                          <div class="tab__film-rating-num">6,9</div>
+                          <div class="tab__film-rating-descr"><span>рейтинг</span>imdb</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-8">
-                      <p class="page__text">Также презентация фильма прошла на&nbsp;Первом канале в шоу «Вечерний Ургант» и «Comic Con» в Сан-Диего и &nbsp;Нью-Йорке.</p>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <p class="page__text">Также презентация фильма прошла на&nbsp;Первом канале в шоу «Вечерний Ургант» и «Comic Con» в Сан-Диего и &nbsp;Нью-Йорке.</p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <div class="page__ill-wrap"><img src="img/grom_01.png" alt=""></div>
+                    <div class="page__ill-caption">Владимир Беседин и Артём Габрелянов на шоу «Вечерний Ургант»</div>
+                  </div>
+                  <div class="offset-xs-2 col-xs-8 offset-sm-3 col-sm-6 col-md-4 col-lg-4"><a class="button button--const" href="https://youtu.be/KO9LzXWbnBQ" target="_blank">Смотреть на YouTube</a></div>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <div class="page__ill-wrap"><img src="img/grom_02.png" alt=""></div>
+                    <div class="page__ill-caption">Владимир Беседин, Артём Габрелянов и&nbsp;Роман Котков на&nbsp;фестивале «Comic Con» в&nbsp;Сан-Диего</div>
+                  </div>
+                  <div class="col-sm-12 col-xs-12 col-md-8">
+                    <p class="page__text">Один из самых успешных голливудских режиссеров и&nbsp;продюсеров Бретт Ратнер («Час Пик», «Люди Икс») в&nbsp;режиссерском подходе Владимира увидел молодого себя. Его впечатлили зрелищность экшн-сцен в&nbsp;фильме «Майор Гром, юмор, изобретательный стиль съемки. Он&nbsp;отметил, что Владимир прекрасно чувствует жанр и&nbsp;имеет огромный потенциал как режиссер развлекательного кино.</p>
+                    <p class="page__subtitle">Работа над фильмом</p>
+                    <p class="page__text">В&nbsp;процессе работы над фильмом возникла идея необычно и&nbsp;по-новому снять экшн-сцены, чтобы дать им необходимый темп, но&nbsp;для этого не&nbsp;подходила стандартная операторская техника. Владимиром Бесединым была придумана технология съёмки «360&nbsp;градусов»&nbsp;— «Карусель», которую помог реализовать оператор и&nbsp;инженер Сергей Астахов («Брат», «Брат&nbsp;2»). С&nbsp;помощью неё одним кадром была полностью снята боевая хореография.</p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <div class="page__ill-wrap"><img src="img/grom_03.png" alt=""></div>
+                    <div class="page__ill-caption">Сергей Астахов и Владимир Беседин в процессе разработки механизма «360 градусов»</div>
+                    <div class="page__ill-wrap"><img src="img/grom_04.png" alt=""></div>
+                    <div class="page__ill-caption">Владимир Беседин и инженеры проекта «Майор Гром» в процессе разработки механизма «360 градусов»</div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="video__wrap video__wrap--03"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                        <source src="video/03.webm" type="video/webm" />
+                      </video>
+                      <div class="video__cover"><img src="img/vid_03.webp" alt="" /></div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-8">
-                      <div class="page__ill-wrap"><img src="img/grom_01.png" alt=""></div>
-                      <div class="page__ill-caption">Владимир Беседин и Артём Габрелянов на шоу «Вечерний Ургант»</div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="video__wrap video__wrap--04"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                        <source src="video/04.webm" type="video/webm" />
+                      </video>
+                      <div class="video__cover"><img src="img/vid_04.webp" alt="" /></div>
                     </div>
-                    <div class="offset-xs-2 col-xs-8 offset-sm-3 col-sm-6 col-md-4 col-lg-4"><a class="button button--const" href="https://youtu.be/KO9LzXWbnBQ" target="_blank">Смотреть на YouTube</a></div>
-                    <div class="col-xs-12 col-sm-12 col-md-8">
-                      <div class="page__ill-wrap"><img src="img/grom_02.png" alt=""></div>
-                      <div class="page__ill-caption">Владимир Беседин, Артём Габрелянов и&nbsp;Роман Котков на&nbsp;фестивале «Comic Con» в&nbsp;Сан-Диего</div>
-                    </div>
-                    <div class="col-sm-12 col-xs-12 col-md-8">
-                      <p class="page__text">Один из самых успешных голливудских режиссеров и&nbsp;продюсеров Бретт Ратнер («Час Пик», «Люди Икс») в&nbsp;режиссерском подходе Владимира увидел молодого себя. Его впечатлили зрелищность экшн-сцен в&nbsp;фильме «Майор Гром, юмор, изобретательный стиль съемки. Он&nbsp;отметил, что Владимир прекрасно чувствует жанр и&nbsp;имеет огромный потенциал как режиссер развлекательного кино.</p>
-                      <p class="page__subtitle">Работа над фильмом</p>
-                      <p class="page__text">В&nbsp;процессе работы над фильмом возникла идея необычно и&nbsp;по-новому снять экшн-сцены, чтобы дать им необходимый темп, но&nbsp;для этого не&nbsp;подходила стандартная операторская техника. Владимиром Бесединым была придумана технология съёмки «360&nbsp;градусов»&nbsp;— «Карусель», которую помог реализовать оператор и&nbsp;инженер Сергей Астахов («Брат», «Брат&nbsp;2»). С&nbsp;помощью неё одним кадром была полностью снята боевая хореография.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-8">
-                      <div class="page__ill-wrap"><img src="img/grom_03.png" alt=""></div>
-                      <div class="page__ill-caption">Сергей Астахов и Владимир Беседин в процессе разработки механизма «360 градусов»</div>
-                      <div class="page__ill-wrap"><img src="img/grom_04.png" alt=""></div>
-                      <div class="page__ill-caption">Владимир Беседин и инженеры проекта «Майор Гром» в процессе разработки механизма «360 градусов»</div>
-                    </div>
-                    <div class="col-xs-12">
-                      <div class="video__wrap video__wrap--03"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                          <source src="video/03.webm" type="video/webm" /></video>
-                        <div class="video__cover"><img src="img/vid_03.webp" alt="" /></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <p class="page__subtitle">Музыка к фильму</p>
+                    <p class="page__text">Для Владимира Беседина важна не только техническая сторона создания фильма, но и&nbsp;музыкальная. Вместе с&nbsp;композитором Романом Селивёрстовым и&nbsp;продюсером Red Hot Chilly Pepers&nbsp;— Райаном Хьюиттом было записано и спродюсированно несколько оригинальных треков. Записью саундтреков занималась огромная команда из Великобритании, США и России. Оркестр был записан на одной из легендарных студий мира «AbbeyRoadStudioOne».</p>
+                    <p class="page__text">На студии «Blackbird Studio» в Нешвилле специально для фильма было записано два абсолютно разных трека. Для записи были использованы инструменты и оборудование 60-х годов, чтобы получить аутентичное звучание.</p>
+                    <div class="page__ill-wrap"><img src="img/grom_05.png" alt="Майор Гром"></div>
+                    <div class="page__ill-caption">Оркестр «Abbey Roads» в процессе записи саундтреков к проектам «Майор Гром» и «Майор Гром: Чумной Доктор»</div>
+                    <div class="page__ill-wrap"><img src="img/grom_06.png" alt="Майор Гром"></div>
+                    <div class="page__ill-caption">Владимир Беседин и Роман Селивёрстов в процессе записи саундтреков к проектам «Майор Гром» и «Майор Гром: Чумной Доктор»</div>
+                    <div class="page__ill-wrap"><img src="img/grom_07.png" alt="Майор Гром"></div>
+                    <div class="page__ill-caption">Владимир Беседин и команда «BlackBird Studio» в процессе создания саундтреков к проектам «Майор Гром» и «Майор Гром: Чумной Доктор»</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row no-gutter">
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/8ZyUD-B4qRY/">
+                            <picture>
+                              <source srcset="https://i.ytimg.com/vi_webp/8ZyUD-B4qRY/maxresdefault.webp" type="image/webp" /><!-- TODO: добавить source c jpg-->
+                              <!-- TODO: проверить как сделано, включая фрейм и размеры (захардкодить)--><img class="yt-video__media" src="https://i.ytimg.com/vi/8ZyUD-B4qRY/maxresdefault.jpg" alt="" />
+                            </picture>
+                          </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                              <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                              <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                            </svg></button></div>
                       </div>
-                    </div>
-                    <div class="col-xs-12">
-                      <div class="video__wrap video__wrap--04"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                          <source src="video/04.webm" type="video/webm" /></video>
-                        <div class="video__cover"><img src="img/vid_04.webp" alt="" /></div>
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/ZDgddfwPrn4/">
+                            <picture>
+                              <source srcset="https://i.ytimg.com/vi_webp/ZDgddfwPrn4/maxresdefault.webp" type="image/webp" /><!-- TODO: добавить source c jpg-->
+                              <!-- TODO: проверить как сделано, включая фрейм и размеры (захардкодить)--><img class="yt-video__media" src="https://i.ytimg.com/vi/ZDgddfwPrn4/maxresdefault.jpg" alt="" />
+                            </picture>
+                          </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                              <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                              <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                            </svg></button></div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-8">
-                      <p class="page__subtitle">Музыка к фильму</p>
-                      <p class="page__text">Для Владимира Беседина важна не только техническая сторона создания фильма, но и&nbsp;музыкальная. Вместе с&nbsp;композитором Романом Селивёрстовым и&nbsp;продюсером Red Hot Chilly Pepers&nbsp;— Райаном Хьюиттом было записано и спродюсированно несколько оригинальных треков. Записью саундтреков занималась огромная команда из Великобритании, США и России. Оркестр был записан на одной из легендарных студий мира «AbbeyRoadStudioOne».</p>
-                      <p class="page__text">На студии «Blackbird Studio» в Нешвилле специально для фильма было записано два абсолютно разных трека. Для записи были использованы инструменты и оборудование 60-х годов, чтобы получить аутентичное звучание.</p>
-                      <div class="page__ill-wrap"><img src="img/grom_05.png"></div>
-                      <div class="page__ill-caption">Оркестр «Abbey Roads» в процессе записи саундтреков к проектам «Майор Гром» и «Майор Гром: Чумной Доктор»</div>
-                      <div class="page__ill-wrap"><img src="img/grom_06.png"></div>
-                      <div class="page__ill-caption">Владимир Беседин и Роман Селивёрстов в процессе записи саундтреков к проектам «Майор Гром» и «Майор Гром: Чумной Доктор»</div>
-                      <div class="page__ill-wrap"><img src="img/grom_07.png"></div>
-                      <div class="page__ill-caption">Владимир Беседин и команда «BlackBird Studio» в процессе создания саундтреков к проектам «Майор Гром» и «Майор Гром: Чумной Доктор»</div>
-                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <p class="page__subtitle">Декорации</p>
+                    <p class="page__text">Специально для фильма созданы разнообразные декорации. Был разработан дизйн помещения банка от интерьера до корпоративного стиля, где расположились настоящие стойки, люстры, кабинеты, банкоматы и трехэтажное денежное хранилище.</p>
+                    <div class="page__ill-wrap"><img src="img/grom_08.png" alt="Майор Гром"></div>
+                    <div class="page__ill-caption"></div>
+                    <div class="page__ill-wrap"><img src="img/grom_09.png" alt="Майор Гром"></div>
+                    <div class="page__ill-caption"></div>
+                    <p class="page__text">Для того чтобы передать атмосферу заброшенного отеля, где проходила часть съёмок, была изготовлена пятиметровая статуя Посейдона, которая отлично вписалась в интерьер.</p>
+                    <div class="page__ill-wrap"><img src="img/grom_10.png" alt="Майор Гром"></div>
+                    <div class="page__ill-caption"></div>
                   </div>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                      <div class="row no-gutter">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                          <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/8ZyUD-B4qRY/">
-                              <picture>
-                                <source srcset="https://i.ytimg.com/vi_webp/8ZyUD-B4qRY/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/8ZyUD-B4qRY/maxresdefault.jpg" alt="" /></picture>
-                            </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
-                                <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
-                                <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
-                              </svg></button></div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                          <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/ZDgddfwPrn4/">
-                              <picture>
-                                <source srcset="https://i.ytimg.com/vi_webp/ZDgddfwPrn4/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/ZDgddfwPrn4/maxresdefault.jpg" alt="" /></picture>
-                            </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
-                                <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
-                                <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
-                              </svg></button></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-8">
-                      <p class="page__subtitle">Декорации</p>
-                      <p class="page__text">Специально для фильма созданы разнообразные декорации. Был разработан дизйн помещения банка от интерьера до корпоративного стиля, где расположились настоящие стойки, люстры, кабинеты, банкоматы и трехэтажное денежное хранилище.</p>
-                      <div class="page__ill-wrap"><img src="img/grom_08.png"></div>
-                      <div class="page__ill-caption"></div>
-                      <div class="page__ill-wrap"><img src="img/grom_09.png"></div>
-                      <div class="page__ill-caption"></div>
-                      <p class="page__text">Для того чтобы передать атмосферу заброшенного отеля, где проходила часть съёмок, была изготовлена пятиметровая статуя Посейдона, которая отлично вписалась в интерьер.</p>
-                      <div class="page__ill-wrap"><img src="img/grom_10.png"></div>
-                      <div class="page__ill-caption"></div>
-                    </div>
-                    <div class="button-collapse-wrap col-xs-12">
-                      <div class="button-collapse">Свернуть</div>
-                    </div>
+                  <div class="button-collapse-wrap col-xs-12">
+                    <div class="button-collapse">Свернуть</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="projects__item projects__item--active" id="film-doc">
-                  <div class="projects__item-wrap" id="trig-film-doc"><img src="img/tab_Doc.png" alt=""></div>
-                  <div class="projects__item-title">Тизер «Майор гром: чумной доктор»</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="projects__item projects__item--active" id="film-doc">
+                <div class="projects__item-wrap" id="trig-film-doc"><img src="img/tab_Doc.png" alt=""></div>
+                <div class="projects__item-title">Тизер «Майор гром: чумной доктор»</div>
+              </div>
+              <div class="projects__tab-content" id="content-film-doc">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/ZQUxpQHY4eQ/">
+                        <picture>
+                          <source srcset="https://i.ytimg.com/vi_webp/ZQUxpQHY4eQ/maxresdefault.webp" type="image/webp" /><!-- TODO: добавить source c jpg-->
+                          <!-- TODO: проверить как сделано, включая фрейм и размеры (захардкодить)--><img class="yt-video__media" src="https://i.ytimg.com/vi/ZQUxpQHY4eQ/maxresdefault.jpg" alt="" />
+                        </picture>
+                      </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                          <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                          <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                        </svg></button></div>
+                  </div>
                 </div>
-                <div class="projects__tab-content" id="content-film-doc">
+                <div class="tab__film-info">
                   <div class="row">
-                    <div class="col-xs-12">
-                      <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/ZQUxpQHY4eQ/">
-                          <picture>
-                            <source srcset="https://i.ytimg.com/vi_webp/ZQUxpQHY4eQ/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/ZQUxpQHY4eQ/maxresdefault.jpg" alt="" /></picture>
-                        </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
-                            <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
-                            <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
-                          </svg></button></div>
+                    <div class="tab__film-head col-xs-12 col-sm-12 col-md-8">
+                      <div class="tab__film-year">2017</div>
+                      <h3 class="page__title tab__film-title">Майор Гром: чумной доктор</h3>
+                    </div>
+                    <div class="tab__credits col-xs-12 col-sm-12 col-md-4">
+                      <p class="tab__credit-role">Режиссёр</p>
+                      <p class="tab__credit-pers">Владимир Беседин</p>
+                      <p class="tab__credit-role">Сценаристы</p>
+                      <p class="tab__credit-pers">Владимир Беседин, Артём Габрелянов</p>
+                      <p class="tab__credit-role">Оператор</p>
+                      <p class="tab__credit-pers">Арсений Кан</p>
+                      <p class="tab__credit-role">Композитор</p>
+                      <p class="tab__credit-pers">Роман Селивёрстов</p>
+                      <p class="tab__credit-role">Художники</p>
+                      <p class="tab__credit-pers">В разработке</p>
+                      <p class="tab__credit-role">Монтаж</p>
+                      <p class="tab__credit-pers">Юрий Тарханов</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 col-md-8">
+                      <p class="page__text">После зрительского успеха техники «360 градусов» в «Майое Громе» был придуман и воплощен приём съемки, где камера пролетает сквозь автомобили.</p>
                     </div>
                   </div>
-                  <div class="tab__film-info">
-                    <div class="row">
-                      <div class="tab__film-head col-xs-12 col-sm-12 col-md-8">
-                        <div class="tab__film-year">2017</div>
-                        <h3 class="page__title tab__film-title">Майор Гром: чумной доктор</h3>
-                      </div>
-                      <div class="tab__credits col-xs-12 col-sm-12 col-md-4">
-                        <p class="tab__credit-role">Режиссёр</p>
-                        <p class="tab__credit-pers">Владимир Беседин</p>
-                        <p class="tab__credit-role">Сценаристы</p>
-                        <p class="tab__credit-pers">Владимир Беседин, Артём Габрелянов</p>
-                        <p class="tab__credit-role">Оператор</p>
-                        <p class="tab__credit-pers">Арсений Кан</p>
-                        <p class="tab__credit-role">Композитор</p>
-                        <p class="tab__credit-pers">Роман Селивёрстов</p>
-                        <p class="tab__credit-role">Художники</p>
-                        <p class="tab__credit-pers">В разработке</p>
-                        <p class="tab__credit-role">Монтаж</p>
-                        <p class="tab__credit-pers">Юрий Тарханов</p>
-                      </div>
-                      <div class="col-sm-12 col-xs-12 col-md-8">
-                        <p class="page__text">После зрительского успеха техники «360 градусов» в «Майое Громе» был придуман и воплощен приём съемки, где камера пролетает сквозь автомобили.</p>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="video__wrap video__wrap--05"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                          <source src="video/05.webm" type="video/webm" />
+                        </video>
+                        <div class="video__cover"><img src="img/vid_05.webp" alt="" /></div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-xs-12">
-                        <div class="video__wrap video__wrap--05"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                            <source src="video/05.webm" type="video/webm" /></video>
-                          <div class="video__cover"><img src="img/vid_05.webp" alt="" /></div>
-                        </div>
+                  </div>
+                  <div class="button-collapse-wrap col-xs-12">
+                    <div class="button-collapse">Свернуть</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projects__tab-wrap" id="tab-clips">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="projects__item projects__item--active" id="clip-mayak">
+                <div class="projects__item-wrap" id="trig-clip-mayak"><img src="img/tab_mayak.png" alt=""></div>
+                <div class="projects__item-title">Клип IOWA – Маяки</div>
+              </div>
+              <div class="projects__tab-content" id="content-clip-mayak">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/WbJjkd4HXLg/">
+                        <picture>
+                          <source srcset="https://i.ytimg.com/vi_webp/WbJjkd4HXLg/maxresdefault.webp" type="image/webp" /><!-- TODO: добавить source c jpg-->
+                          <!-- TODO: проверить как сделано, включая фрейм и размеры (захардкодить)--><img class="yt-video__media" src="https://i.ytimg.com/vi/WbJjkd4HXLg/maxresdefault.jpg" alt="" />
+                        </picture>
+                      </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                          <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                          <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                        </svg></button></div>
+                  </div>
+                </div>
+                <div class="tab__film-info">
+                  <div class="row">
+                    <div class="tab__film-head col-xs-12 col-sm-12 col-md-8">
+                      <div class="tab__film-year">2017</div>
+                      <h3 class="page__title tab__film-title">iowa&nbsp;— маяки</h3>
+                    </div>
+                    <div class="tab__credits col-xs-12 col-sm-12 col-md-4">
+                      <p class="tab__credit-role">Режиссёр</p>
+                      <p class="tab__credit-pers">Владимир Беседин</p>
+                      <p class="tab__credit-role">Сценаристы</p>
+                      <p class="tab__credit-pers">Владимир Беседин</p>
+                      <p class="tab__credit-role">Декоратор</p>
+                      <p class="tab__credit-pers">Ксения Цель</p>
+                      <p class="tab__credit-role">Оператор-постановщик</p>
+                      <p class="tab__credit-pers">Глеб Вавилов</p>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 col-md-8">
+                      <p class="page__text">По сценарию Владимира Беседина герои из придуманного ими мира попадают в реальный мир. Повязка на&nbsp;глазах&nbsp;— розовые очки, через которые герои клипа смотрят на происходящее вокруг. Но&nbsp;когда снимаешь очки, окружающая действительность воспринимается совсем иначе.</p>
+                    </div>
+                    <div class="tab__mayak-cadr col-sm-12 col-xs-12 col-md-8">
+                      <div class="tab__mayak-cadr-item"><img src="img/mayak01.png" alt=""></div>
+                      <div class="tab__mayak-cadr-item"><img src="img/mayak02.png" alt=""></div>
+                      <div class="tab__mayak-cadr-item"><img src="img/mayak03.png" alt=""></div>
+                      <div class="tab__mayak-cadr-item"><img src="img/mayak04.png" alt=""></div>
+                    </div>
+                    <div class="page__ill-caption"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="video__wrap video__wrap--06"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                          <source src="video/06.webm" type="video/webm" />
+                        </video>
+                        <div class="video__cover"><img src="img/vid_06.webp" alt="" /></div>
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-xs-12 col-md-8">
+                      <div class="page__ill-wrap"><img src="img/mayak05.png" alt=""></div>
+                    </div>
+                    <div class="col-sm-12 col-xs-12 col-md-8">
+                      <div class="page__ill-wrap"><img src="img/mayak06.png" alt=""></div>
+                    </div>
+                    <div class="col-xs-12">
+                      <div class="video__wrap video__wrap--07"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                          <source src="video/07.webm" type="video/webm" />
+                        </video>
+                        <div class="video__cover"><img src="img/vid_07.webp" alt="" /></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-xs-12 col-md-8">
+                    <p class="page__text">Чтобы создать атмосферу апокалипсиса в&nbsp;кадре, в&nbsp;павильоне «Ленфильма» построили декорации экологической катастрофы. В&nbsp;течение нескольких дней съёмочная команда собирала более 80&nbsp;тысяч килограмм мусора, который после съёмок был отсортирован и&nbsp;сдан на переработку.</p>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-8">
+                    <div class="video__wrap video__wrap--chrom"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                        <source src="video/chrom.webm" type="video/webm" />
+                      </video>
+                      <div class="video__cover"><img src="img/vid_chrom.webp" alt="" /></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="video__wrap video__wrap--08"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
+                        <source src="video/08.webm" type="video/webm" />
+                      </video>
+                      <div class="video__cover"><img src="img/vid_08.webp" alt="" /></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12 col-xs-12 col-md-8">
+                    <p class="page__text">Вместе с&nbsp;олористом Александром Золоторёвым и&nbsp;оператором-постановщиком Глебом Вавиловым после съёмок клипа был создан Apocalyptic lightbox.</p>
+                  </div>
+                  <div class="col-sm-12 col-xs-12 col-md-12 col-lg-11">
+                    <div class="page__ill-wrap"><img src="img/mayak07.png" alt=""></div>
+                  </div>
+                  <div class="button-collapse-wrap col-xs-12">
+                    <div class="button-collapse">Свернуть</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="projects__item projects__item--active" id="clip-bit">
+                <div class="projects__item-wrap" id="trig-clip-bit"><img src="img/tab_Bit.png" alt=""></div>
+                <div class="projects__item-title">Клип IOWA – бъёт бит</div>
+              </div>
+              <div class="projects__tab-content" id="content-clip-bit">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/d9eSfSACgmI/">
+                        <picture>
+                          <source srcset="https://i.ytimg.com/vi_webp/d9eSfSACgmI/maxresdefault.webp" type="image/webp" /><!-- TODO: добавить source c jpg-->
+                          <!-- TODO: проверить как сделано, включая фрейм и размеры (захардкодить)--><img class="yt-video__media" src="https://i.ytimg.com/vi/d9eSfSACgmI/maxresdefault.jpg" alt="" />
+                        </picture>
+                      </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
+                          <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
+                          <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
+                        </svg></button></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
                     <div class="button-collapse-wrap col-xs-12">
                       <div class="button-collapse">Свернуть</div>
                     </div>
@@ -350,135 +500,7 @@
               </div>
             </div>
           </div>
-          <div class="projects__tab-wrap" id="tab-clips">
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="projects__item projects__item--active" id="clip-mayak">
-                  <div class="projects__item-wrap" id="trig-clip-mayak"><img src="img/tab_mayak.png" alt=""></div>
-                  <div class="projects__item-title">Клип IOWA – Маяки</div>
-                </div>
-                <div class="projects__tab-content" id="content-clip-mayak">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/WbJjkd4HXLg/">
-                          <picture>
-                            <source srcset="https://i.ytimg.com/vi_webp/WbJjkd4HXLg/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/WbJjkd4HXLg/maxresdefault.jpg" alt="" /></picture>
-                        </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
-                            <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
-                            <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
-                          </svg></button></div>
-                    </div>
-                  </div>
-                  <div class="tab__film-info">
-                    <div class="row">
-                      <div class="tab__film-head col-xs-12 col-sm-12 col-md-8">
-                        <div class="tab__film-year">2017</div>
-                        <h3 class="page__title tab__film-title">iowa&nbsp;— маяки</h3>
-                      </div>
-                      <div class="tab__credits col-xs-12 col-sm-12 col-md-4">
-                        <p class="tab__credit-role">Режиссёр</p>
-                        <p class="tab__credit-pers">Владимир Беседин</p>
-                        <p class="tab__credit-role">Сценаристы</p>
-                        <p class="tab__credit-pers">Владимир Беседин</p>
-                        <p class="tab__credit-role">Декоратор</p>
-                        <p class="tab__credit-pers">Ксения Цель</p>
-                        <p class="tab__credit-role">Оператор-постановщик</p>
-                        <p class="tab__credit-pers">Глеб Вавилов</p>
-                      </div>
-                      <div class="col-sm-12 col-xs-12 col-md-8">
-                        <p class="page__text">По сценарию Владимира Беседина герои из придуманного ими мира попадают в реальный мир. Повязка на&nbsp;глазах&nbsp;— розовые очки, через которые герои клипа смотрят на происходящее вокруг. Но&nbsp;когда снимаешь очки, окружающая действительность воспринимается совсем иначе.</p>
-                      </div>
-                      <div class="tab__mayak-cadr col-sm-12 col-xs-12 col-md-8">
-                        <div class="tab__mayak-cadr-item"><img src="img/mayak01.png" alt=""></div>
-                        <div class="tab__mayak-cadr-item"><img src="img/mayak02.png" alt=""></div>
-                        <div class="tab__mayak-cadr-item"><img src="img/mayak03.png" alt=""></div>
-                        <div class="tab__mayak-cadr-item"><img src="img/mayak04.png" alt=""></div>
-                      </div>
-                      <div class="page__ill-caption"></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-12">
-                        <div class="video__wrap video__wrap--06"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                            <source src="video/06.webm" type="video/webm" /></video>
-                          <div class="video__cover"><img src="img/vid_06.webp" alt="" /></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12 col-xs-12 col-md-8">
-                        <div class="page__ill-wrap"><img src="img/mayak05.png" alt=""></div>
-                      </div>
-                      <div class="col-sm-12 col-xs-12 col-md-8">
-                        <div class="page__ill-wrap"><img src="img/mayak06.png" alt=""></div>
-                      </div>
-                      <div class="col-xs-12">
-                        <div class="video__wrap video__wrap--07"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                            <source src="video/07.webm" type="video/webm" /></video>
-                          <div class="video__cover"><img src="img/vid_07.webp" alt="" /></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12 col-xs-12 col-md-8">
-                      <p class="page__text">Чтобы создать атмосферу апокалипсиса в&nbsp;кадре, в&nbsp;павильоне «Ленфильма» построили декорации экологической катастрофы. В&nbsp;течение нескольких дней съёмочная команда собирала более 80&nbsp;тысяч килограмм мусора, который после съёмок был отсортирован и&nbsp;сдан на переработку.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-8">
-                      <div class="video__wrap video__wrap--chrom"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                          <source src="video/chrom.webm" type="video/webm" /></video>
-                        <div class="video__cover"><img src="img/vid_chrom.webp" alt="" /></div>
-                      </div>
-                    </div>
-                    <div class="col-xs-12">
-                      <div class="video__wrap video__wrap--08"><video class="video video__hidden" loop="loop" width="850" autoplay="autoplay" control="control">
-                          <source src="video/08.webm" type="video/webm" /></video>
-                        <div class="video__cover"><img src="img/vid_08.webp" alt="" /></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12 col-xs-12 col-md-8">
-                      <p class="page__text">Вместе с&nbsp;олористом Александром Золоторёвым и&nbsp;оператором-постановщиком Глебом Вавиловым после съёмок клипа был создан Apocalyptic lightbox.</p>
-                    </div>
-                    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-11">
-                      <div class="page__ill-wrap"><img src="img/mayak07.png" alt=""></div>
-                    </div>
-                    <div class="button-collapse-wrap col-xs-12">
-                      <div class="button-collapse">Свернуть</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="projects__item projects__item--active" id="clip-bit">
-                  <div class="projects__item-wrap" id="trig-clip-bit"><img src="img/tab_Bit.png" alt=""></div>
-                  <div class="projects__item-title">Клип IOWA – бъёт бит</div>
-                </div>
-                <div class="projects__tab-content" id="content-clip-bit">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class="yt-video"><a class="yt-video__link" href="https://youtu.be/d9eSfSACgmI/">
-                          <picture>
-                            <source srcset="https://i.ytimg.com/vi_webp/d9eSfSACgmI/maxresdefault.webp" type="image/webp" /><img class="yt-video__media" src="https://i.ytimg.com/vi/d9eSfSACgmI/maxresdefault.jpg" alt="" /></picture>
-                        </a><button class="yt-video__button" aria-label="Play video"><svg width='68' height='48' viewBox='0 0 68 48'>
-                            <path class='yt-video__button-shape' d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z'></path>
-                            <path class='yt-video__button-icon' d='M 45,24 27,14 27,34'></path>
-                          </svg></button></div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <div class="button-collapse-wrap col-xs-12">
-                        <div class="button-collapse">Свернуть</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
       </section>
       <section class="news">
         <div class="news-wrap">
