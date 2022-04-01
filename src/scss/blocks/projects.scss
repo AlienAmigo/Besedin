@@ -11,14 +11,14 @@
   }
 
   &__tab-label {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     margin-bottom: 34px;
     @include ff-OpenSansCondenced(300, 18px, 23px);
     text-transform: uppercase;
     cursor: pointer;
 
-    &:hover {
+    &:hover  {
       color: $gray-medium;
     }
 
@@ -31,8 +31,8 @@
 
       &::before {
         @include pseudo();
-        bottom: -2px;
         left: 0;
+        bottom: -2px;
         width: 100%;
         height: 2px;
         background-color: $warning-color;
@@ -58,9 +58,14 @@
   &__item {
     display: none;
     position: relative;
+    margin: 0;
     width: 100%;
     height: auto;
-    margin: 0;
+
+    &:hover:before {
+      opacity: 0.75;
+      transition: opacity 0.3s ease-in;
+    }
 
     &::before {
       @include pseudo();
@@ -70,11 +75,6 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
       cursor: pointer;
-    }
-
-    &:hover::before {
-      opacity: 0.75;
-      transition: opacity 0.3s ease-in;
     }
 
     &--active {
@@ -95,8 +95,8 @@
 
   &__item-title {
     position: absolute;
-    bottom: 14px;
     left: 30px;
+    bottom: 14px;
     width: 210px;
     height: 40px;
     margin: 0;
@@ -135,8 +135,8 @@
     }
 
     &__item-title {
-      bottom: 15px;
       left: 70px;
+      bottom: 15px;
       width: auto;
       height: 90px;
       font-size: 36px;
@@ -162,8 +162,8 @@
     }
 
     &__item-title {
-      bottom: 30px;
       left: 72px;
+      bottom: 30px;
       width: auto;
       height: 95px;
       font-size: 48px;

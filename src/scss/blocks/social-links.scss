@@ -1,6 +1,7 @@
 .social-links {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: flex-start;
   margin-top: 20px;
   order: 1;
@@ -30,10 +31,10 @@
   }
 }
 
-@media screen and (min-width: $screen-sm) {
+@media screen and (min-width: $screen-md) {
   .social-links {
-    justify-content: center;
     order: 2;
+    justify-content: center;
 
     &--menu {
       display: none;

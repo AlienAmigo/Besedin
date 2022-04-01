@@ -1,23 +1,28 @@
 .preloader {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 9999;
-  top: 0;
   left: 0;
-  width: 100vw;
+  top: 0;
   height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
   background-color: $gray-dark;
 
   .header__title {
     z-index: 12;
-    width: auto;
     margin: 0;
     padding: 0;
+    width: auto;
     text-align: center;
+  }
+
+  &--disappear {
+    animation-name: hide;
+    animation: 1.4s linear infinite;
   }
 
   &__content {
@@ -26,10 +31,10 @@
 
   &__widget {
     &-wrap {
-      position: absolute;
       z-index: 1;
-      top: calc(50% - 50px);
+      position: absolute;
       left: calc(50% - 50px);
+      top: calc(50% - 50px);
       width: 100px;
       height: 100px;
     }
@@ -59,17 +64,12 @@
       animation-name: third;
     }
   }
-
-  &--disappear {
-    animation: hide 1.4s linear infinite;
-  }
 }
 
 @keyframes first {
   0% {
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
   }
-
   100% {
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
   }
@@ -79,7 +79,6 @@
   0% {
     transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
   }
-
   100% {
     transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
   }
@@ -89,7 +88,6 @@
   0% {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
   }
-
   100% {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
@@ -99,7 +97,6 @@
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }

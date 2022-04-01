@@ -50,9 +50,9 @@
   }
 
   &__ill-wrap {
-    max-width: 100%;
     margin-top: 30px;
-    @include img-wrap(100%, 'auto');
+    max-width: 100%;
+    @include img-wrap(100%, "auto");
   }
 
   &__ill-caption {
@@ -73,7 +73,6 @@
     &--main {
       padding-bottom: 40%;
     }
-
     &--01 {
       padding-bottom: 37.5%;
     }
@@ -111,7 +110,7 @@
     }
 
     &--yt {
-      padding-bottom: 0.585%;
+      padding-bottom: 0, 585%;
     }
 
     & iframe,
@@ -150,16 +149,16 @@
       font-size: 14px;
       line-height: 19px;
 
-      &__ill-caption {
-        margin-bottom: 55px;
+      &[id="About"] {
+        padding-top: 25px;
       }
 
       &--padding-left {
         padding-left: 40px;
       }
 
-      &[id='About'] {
-        padding-top: 25px;
+      &__ill-caption {
+        margin-bottom: 55px;
       }
     }
   }
@@ -181,13 +180,13 @@
       font-size: 16px;
       line-height: 25px;
 
+      &--padding-left {
+        padding-left: 25px;
+      }
+
       &__ill-caption {
         margin-bottom: 40px;
         @include ff-OpenSans(400, 12px, 18px);
-      }
-
-      &--padding-left {
-        padding-left: 25px;
       }
     }
   }

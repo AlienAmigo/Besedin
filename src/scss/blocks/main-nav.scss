@@ -9,6 +9,11 @@
   height: 100vh;
   background-color: $gray-dark;
 
+  &--mobile-active {
+    display: flex;
+    animation: fadeInDown 0.5s;
+  }
+
   &__close-btn {
     position: relative;
     width: 25px;
@@ -62,19 +67,14 @@
     &--active {
       &::before {
         @include pseudo();
-        bottom: -4px;
         left: 0;
-        width: 100%;
+        bottom: -4px;
         height: 2px;
+        width: 100%;
         background-color: $text-color;
         opacity: 0;
       }
     }
-  }
-
-  &--mobile-active {
-    display: flex;
-    animation: fadeInDown 0.5s;
   }
 }
 
@@ -95,8 +95,8 @@
 
     &__list {
       flex-direction: row;
-      flex-grow: 1;
       align-items: center;
+      flex-grow: 1;
     }
 
     &__item {
@@ -107,7 +107,7 @@
       line-height: 25px;
     }
 
-    &__link--avtive::before {
+    &__link--active::before {
       opacity: 1;
       animation: bounceInRight 0.5s;
     }
