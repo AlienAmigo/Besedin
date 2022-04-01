@@ -44,7 +44,7 @@ html(class='page  no-js', lang='ru')
         include data.pug
         .row
           header.header
-            a.header__link(href=`${siteRoot}`)
+            a.header__link(href=`${siteRoot}`, id='header-link')
               h1.header__title Владимир #[span Беседин]
             .header__burger(id='menu-burger')
               - for(let i = 0; i < 3; i++)
@@ -55,10 +55,7 @@ html(class='page  no-js', lang='ru')
               ul.main-nav__list
                 - for(let i = 0; i < arrayNav.length; i++)
                   li.main-nav__item
-                    a.main-nav__link(
-                      href=`${arrayNav[i].url}`,
-                      class=`${(i === 0) ? 'main-nav__link--active' : ''}`
-                      )= arrayNav[i].text
+                    a.main-nav__link(href=`${arrayNav[i].url}`, class=`${(i === 0) ? 'main-nav__link--active' : ''}`)= arrayNav[i].text
               +social-links(arraySocialLinks,'social-links--menu')
 
         block content

@@ -198,10 +198,22 @@ ready(function(){
 
   findVideos();
 
+  // Ссылка в шапке (Владимир Беседин)
+  const HeaderLink = document.querySelector('#header-link');
+  if (HeaderLink) {
+    HeaderLink.addEventListener('click', ev => {
+      ev.preventDefault();
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
+    });
+  }
 
   // Плавная прокрутка
 
-  const anchors = document.querySelectorAll('a[href*="#"]')
+  const anchors = document.querySelectorAll('a[href*="#"]:not(a[href="#"])');
 
   for (let item of anchors) {
     item.addEventListener('click', function (e) {
