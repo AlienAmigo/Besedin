@@ -228,7 +228,7 @@ ready(function(){
 
       let targetCoordinates = targetElem.getBoundingClientRect().top;
 
-      window.scrollBy({
+      window.scrollTo({
         top: targetCoordinates - 90,
         left: 0,
         behavior: 'smooth'
@@ -238,20 +238,24 @@ ready(function(){
 
   // Кнопка «Наверх»
   function trackScroll() {
-    let scrolled = window.pageYOffset;
+    let scrolled = window.scrollY;
     let coords = document.documentElement.clientHeight;
 
-    if (scrolled > coords) {
+    if (scrolled > 120) {
       goTopBtn.classList.add('upbtn--show');
     }
-    if (scrolled < coords) {
+    if (scrolled < 120) {
       goTopBtn.classList.remove('upbtn--show');
     }
   }
 
   function backToTop() {
-    if (window.pageYOffset > 0) {
-      window.scrollBy(0, -80, 'smooth');
+    if (window.scrollY > 0) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
       setTimeout(backToTop, 0);
     }
   }
